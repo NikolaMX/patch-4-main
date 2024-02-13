@@ -1,0 +1,28 @@
+{
+    "context": "server",
+    "identifier": "patch 4",
+    "display_name": "patch 4",
+    "description": "patch 4 for tournament",
+    "author": "CC",
+    "version": "1.7",
+    "build": "116982",
+    "date": "2015-02-13",
+    "signature": "not yet implemented",
+    "forum": "",
+    "icon": "",
+    "priority": 90,
+    "category": [
+        "titans", "in-game","server"
+    ],
+    
+    "scenes": {
+		
+		"icon_atlas": [
+			"coui://ui/mods/consultants/icon_atlas.js"
+		],
+		"shared_build":[
+			"coui://ui/mods/consultants/shared_build.js"
+		]
+		
+	}
+}

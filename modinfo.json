@@ -18,7 +18,7 @@
     "scenes": {
 		
 		"icon_atlas": [
-			"coui://ui/mods/consultants/icon_atlas.js"
+			"coui://ui/main/atlas/icon_atlas/icon_atlas.js"
 		],
 		"shared_build":[
 			"coui://ui/mods/consultants/shared_build.js"

@@ -1,0 +1,274 @@
+	Update .2
+	Liberator - Way too weak.
+Range 95 (70)
+Damage 20 (19.5)
+Fixed model clipping
+
+	Hive - TODO
+Given a reclaim tool 60 metal sec
+More todo
+
+	Shank - Health buff uneeded. Attempt to make more accurate.
+Health reverted to 300 (400)
+Ammo gravity increased to 5 from 3
+
+	Necromancer - Waves too small for a 1400 metal unit. More likely for waves to hit.
+Purgers spawned per wave 14 (7)
+Metal per wave 750 (420)
+Metal demand 45 (35)
+Added 7 new bones for spawning.
+	
+	Viper - Doesn't auto attack very well, and also can be micro'd to out range mla units.
+Range 100 (200)
+Attack Frac 0.75 (1.0)
+Damage 50 (40)
+
+	Paladin - Improved chase attacking.
+Attack Frac 0.9 (1.0)
+
+	Metor/Imperator Drones - Removed controllability.
+Removed commands
+
+	Startcannon - Changed icon priorities, now you can see the unit being made.
+added si 4 priority
+
+	Lockheed - A better kestrel. Could be more specialized with the salamander existing.
+Reduced Missile range to 75 (100)
+Increased Missile ammo cap 3 shots (2)
+Gun range 60 (80)
+Gun rate of fire to 2 (4)
+
+	Firebird - Very good, with long range and better dps than the phenix. Now that scythes are good, this should be less so.
+Missile range 160 (180)
+Missile firerate .25 (.33)
+
+	Jackel - Fails at stopping hoards of dox and booms; worse than a double barrel.
+Health increased 1000 (750)
+Ammo demand increased to 1.2 (1)
+
+	Havoc - Noticed it uses the sniper anti missile. Split off, and tweaked.
+Anti Missile weapon range 115 (140)
+and rate of fire .333 (.25)
+New pfx effect
+
+	Walker Fab - If slow, it should have alot of health
+Fixed fab spray
+Increased health to 200 (65)
+Decreased speed to 10 (12)
+
+	Adv Walker Fab - Match it's t1 counterpart.
+Reduce cost to 1900 (2000)
+Increased health to 400 (150)
+Decreased speed to 10 (12)
+Reduced power drain to 1900 (2200)
+
+	Adv Armor Fab - Match it's t2 counterpart.
+Reduced hp to 200 (500)
+Increase speed to 16 (10)
+Reduced build rate to 60 (79)
+
+	Purger - Improved auto attack behaivor
+Attack Frac 0.8 (1.0)
+auto attack
+
+	Miniman - Not good at attacking armies
+Ammo count (8) 7 (shoots two volleys)
+structure AT 1.0 (3.0)
+
+	Monstro
+Added Advanced target priorities.
+
+	Deathmark
+Added Advanced target priorities.
+Made projectile slower, should arc more.
+
+	Meteor - Made drones easier to deal with. Meteors stay away from targets when attacking.
+"aggressive_behavior": "circle"
+max_health 750 (600)
+Drone max_health 30 (60)
+
+	Infiltrator - Tried to make them select with combat groups
+Added UNITTYPE_Offense
+
+	Nova - Reduce AOE, this should make them less OP
+AOE 50 (80)
+
+	Panzer - Could focus defenses
+Added Grenidier priorities.
+
+	Corsair - Could focus defenses
+Added Grenidier priorities.
+
+	Commander lights Fixed
+Cyclopes
+Overwatch
+
+	Updated Attachment points -
+Walker Fab
+Armor Fab	
+Guardian
+Corsair
+Panzer
+Stoke
+Necromancer
+Investigator
+Maul
+Deathmark
+Scorpion
+Shank
+Peacekeeper
+Patriot
+Orbweaver
+Miniman
+Monstrosity
+Purger
+Praetorian
+Advanced Fabrication Walker
+Enforcer
+Lancer
+Earthshaker
+Havoc
+
+	New Models
+Havoc
+
+	...
+
+	HOTFIX
+Walker factory metal rate 15
+Scorpion texture scroll
+Liberator model size
+Purger AT 0 for buildings
+Updated hitboxes for new units.
+THE WALKER FAB ANIM IS TEMP, NOT A BUG
+
+
+	Stoke - Too expensive and slow.
+Increased speed to 16 (14)
+Reduced metal to 180 (210)
+
+	Investigator - Poor vision and army utility for its cost.
+Increased vision to 200 (150)
+Increased deployed vision to 75 (0)
+
+	Radar - For slightly more radar range, the legion pays alot more to build and run.
+Increased health to 750 (500)
+Increased vision to 200 (100)
+
+	Guardian - Too expensive and econ intense to deploy. Low utility
+Reduced metal to 300 (350)
+Reduced metal rate to 30 (45)
+Reduced energy rate to 400 (600)
+Can now build Liberators
+Can now build Shredder - For now...
+
+	Liberator - new turret that can provide vision, and might stop a dox. Only buildable by combat fabs.
+75  metal
+150 hp
+230 vision
+19.5 DPS
+70 range
+
+	Nova - EEEEEEEWWWWWWWWW. Should be a defensive unit, if we're keeping it ingame.
+Reduced move speed to 75 (95)
+Nova AoE vision radius reduced to 10 from 150
+Nova AoE radar range increased to 80 from 0 (should not require power, if the regular pulse does not)
+Nova AoE is now untargetable
+Nova AoE lifespan reduced from 20 seconds to 5 seconds
+Nova AoE death explosion removed 
+
+	Shield - The shield quickly becomes overwelmed by projectiles, and easy to kill.
+HP increased to 1500 from 750
+Ammo cap increased to 60000 from 36000 (40 stored interceptions)
+Ammo demand increased to 1200 from 1000
+
+	Corsair - Terrible grenadier. One idea is for it to be a seige unit (like it once was.) This change is extreme and unlikely to be fair.
+Range increased to 240 from 160.
+HP reduced to 100 from 175.
+DPS reduced to 20 from 30.
+Updated SI icon.
+
+	Necromancer - Fixed transportable
+Now transportable
+
+	Maul - I think it's fine, but others want it to get a tiny hp buff.
+HP increased to 1250 from 1150.
+Updated Buildbar.
+
+	Shank - Expensive, but very strong when used in numbers.
+HP increased to 400 from 300
+Splash damage removed.
+
+	Coment - Very easy to suprise build, and in multiplanet takes very little effort to tech and deploy.
+Moved from fab build to T2 air factory.
+Removed special move.
+
+	Marauder - TODO
+Updated SI icon.
+Added target priority (Same as Icarus priority now)
+
+	Walker fab - TODO
+speed reduced to 12 from 14
+metal consumption increased to 10/s from 9/s
+power consumption reduced to 635/s from 650/s
+
+	Armor fab - Legion lacks speed, it expands very slowly, and vehicle opening are terrible. This gives legion the option to attempt rapid expansion.
+HP reduced to 50 from 185
+speed increased to 18 from 11
+metal consumption reduced to 8/s from 13/s
+power consumption reduced to 600/s from 850/s
+TODO Descriptions
+
+	Purger - Its launch attack often misses, and overkills. Hopefully this can make it more consistant.
+Increased min velocity 150 (80)
+Decreased Projectile lifetime 30 to 1
+Projectile type is now homing
+Projectile turn rate added and set to 60
+
+	Shredder Turret - Was a better galata.
+Decreased range to 110 (150)
+
+	Osprey - Increased handeling
+Break rate 80 (40)
+Metal 140 (100)
+Vision 120 (70)
+
+	Scythe - "They just don't feel good" TODO: More balancing
+Increased damage to 35 (29)
+Decreased Arc to 45 (70)
+
+	Metor - TODO: More thought neede/real balance.
+Decreased HP to 600 (2000)
+
+	Panzer - TODO: Better bluehawk. Ok?
+
+	Havocs - TODO: Too dependent to legion?
+
+	Ripples - TODO: Buildable on land. Rebalance with that in mind.
+
+	More
+
+FACTORIES - Unified cost/production with MLA factories.
+
+MODELS
+Stoke - updated texture
+Flyer Fab - new model
+Walker Fab - new model
+Osprey - new model
+Dauntless - new model
+Scythe - new model
+Guardian - new model
+Armor fab - new model
+Deathmark - new model
+Corsair - new model
+Shank - new model
+Radar - new model
+Scorpion - new model
+Panzer - model import
+Havoc - TODO model import
+
+
+
+
+
+

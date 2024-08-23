@@ -1,0 +1,7 @@
+
+Update all t2 buildbars
+Update commander selection image.
+Havoc range display should be regular weapon, not anti missile.
+Hive unwelming locus lifespawn. more HP? Consider reworking into a unitlity reclaim unit
+Theodor weak?
+TRANSLATIONS FOR LIB and FABS

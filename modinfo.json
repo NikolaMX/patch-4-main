@@ -1,28 +1,20 @@
 {
-    "context": "server",
-    "identifier": "patch45",
-    "display_name": "patch 45",
-    "description": "patch 45 for tournament",
-    "author": "CC",
-    "version": "1.8",
-    "build": "116982",
-    "date": "2015-02-13",
-    "signature": "not yet implemented",
-    "forum": "",
-    "icon": "",
-    "priority": 90,
-    "category": [
-        "titans", "in-game","server"
-    ],
-    
-    "scenes": {
-		
-		"icon_atlas": [
-			"coui://ui/mods/consultants/icon_atlas.js"
-		],
-		"shared_build":[
-			"coui://ui/mods/consultants/shared_build.js"
-		]
-		
-	}
+	"identifier": "sunrise3",
+	"display_name": "Sunrise 3",
+	"description": "Legion Balance Testing",
+	"author": "Anonemous2 & Taiga",
+	"signature": "not yet implemented",
+	"forum": "https://forums.planetaryannihilation.com/threads/wip-casual-mla-unit-addon.73484/#post-1151453",
+	"priority": 2,
+	"icon": "sunrise.png",
+	"titansOnly": true,
+	"category": [
+		"balance",
+		"legion",
+		"expansion"
+	],
+	"context": "server",
+	"date": "2023-11-6",
+	"build": "116982",
+	"version": "0.1.0"
 }

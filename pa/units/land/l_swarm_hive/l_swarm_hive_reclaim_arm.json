@@ -1,0 +1,14 @@
+{
+    "base_spec": "/pa/tools/engineer_build_arm_adv/engineer_build_arm_adv.json",
+    
+    "yaw_rate": 360,
+    "pitch_rate": 360,
+    "max_range": 180,
+    "auto_repair": false,
+    "auto_reclaim": true,
+    "construction_demand": {
+        "energy": 0,
+        "metal": 60
+    },
+    "can_only_assist_with_buildable_items": true
+}

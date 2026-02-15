@@ -1,0 +1,129 @@
+{
+    "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
+    "display_name": "Predator",
+    "description": "!LOC: Attack Vehicle - Fast raider. Attacks surface targets.",
+    "max_health": 85,
+    "build_metal_cost": 100,
+    "attachable": {
+        "offsets": {
+            "root": [
+                0,
+                0,
+                0
+            ],
+            "head": [
+                0,
+                0,
+                2.7
+            ]
+        }
+    },
+    "unit_types": [
+        "UNITTYPE_Tank",
+        "UNITTYPE_Mobile",
+        "UNITTYPE_Offense",
+        "UNITTYPE_Land",
+        "UNITTYPE_Basic",
+        "UNITTYPE_FactoryBuild",
+        "UNITTYPE_CannonBuildable",
+        "UNITTYPE_Custom1"
+    ],
+    "transportable": {
+        "size": 1
+    },
+    "guard_layer": "WL_LandHorizontal",
+    "navigation": {
+            "type": "land-small",
+            "acceleration": 150,
+            "brake": 150,
+            "move_speed": 15,
+            "turn_speed": 180   
+    },
+    "physics": {
+        "radius": 4
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 130
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/land/l_attack_vehicle/l_attack_vehicle.papa",
+        "animtree": "/pa/anim/anim_trees/turret_anim_tree.json",
+        "arrows": 5
+    },
+    "maintain_priority_target": false,
+    "tools": [
+        {
+            "spec_id": "/pa/units/land/l_attack_vehicle/l_attack_vehicle_tool_weapon.json",
+            "aim_bone": "socket_aim",
+            "muzzle_bone": "socket_muzzle"
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/veh"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/veh/tank_light_fire",
+            "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_muzzle"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/Veh"
+        }
+    },
+    "audio": {
+        "loops": {
+            "move": {
+                "cue": "/SE/Movement/veh/tank_light_laser_loop",
+                "flag": "vel_changed",
+                "should_start_func": "is_moving",
+                "should_stop_func": "is_not_moving"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/veh/tank_light_laser"
+        }
+    },
+    "headlights": [
+        {
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                -0.5,
+                -1.0,
+                1.5
+            ],
+            "orientation": [
+                0.0,
+                65.0,
+                0.0
+            ],
+            "near_width": 2.0,
+            "near_height": 2.0,
+            "near_distance": 1.2,
+            "far_distance": 20.0,
+            "color": [
+                0.9,
+                0.92,
+                1.0
+            ],
+            "intensity": 1.4
+        }
+    ],
+    "selection_icon": {
+        "diameter": 11.0
+    },
+    "mesh_bounds": [
+        4.93769,
+        6.4,
+        2.6835
+    ],
+    "TEMP_texelinfo": 18.6537
+}

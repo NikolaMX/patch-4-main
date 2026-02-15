@@ -1,0 +1,20 @@
+{
+	"identifier": "sunrise5",
+	"display_name": "Legion Balance for major release",
+	"description": "Legion Balance Testing",
+	"author": "Anonemous2",
+	"signature": "not yet implemented",
+	"forum": "NA",
+	"priority": 2,
+	"icon": "sunrise.png",
+	"titansOnly": true,
+	"category": [
+		"balance",
+		"legion",
+		"expansion"
+	],
+	"context": "server",
+	"date": "2025-12-25",
+	"build": "120799",
+	"version": "0.1.1"
+}

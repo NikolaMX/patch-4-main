@@ -1,0 +1,141 @@
+{
+    "emitters": [
+
+        {
+            "spec": {
+                "shader": "particle_add",
+                "size": [
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        1,
+                        1.0
+                    ]
+                ],
+                "green": [
+                    [
+                        0.25,
+                        1
+                    ],
+                    [
+                        0.5,
+                        1
+                    ],
+                    [
+                        0.6,
+                        1
+                    ]
+                ],
+                "red": [
+                    [
+                        0.25,
+                        1
+                    ],
+                    [
+                        0.5,
+                        1
+                    ],
+                    [
+                        0.6,
+                        1
+                    ]
+                ],
+                "blue": [
+                    [
+                        0.25,
+                        1
+                    ],
+                    [
+                        0.5,
+                        1
+                    ],
+                    [
+                        0.6,
+                        1
+                    ]
+                ],
+                "alpha": [
+                    [
+                        0,
+                        0.3
+                    ],
+                    [
+                        0.1,
+                        5
+                    ],
+                    [
+                        0.2,
+                        4
+                    ],
+                    [
+                        0.4,
+                        3
+                    ],
+                    [
+                        0.8,
+                        1
+                    ],
+                    [
+                        1,
+                        0
+                    ]
+                ],
+
+                "baseTexture": "/pa/effects/textures/particles/softSmoke.papa"
+            },
+
+            "type":"SPHEROID",
+            "offsetRangeX":0.5,
+            "offsetRangeZ":0.5,
+            "sizeX": 6,
+            "sizeRangeX":1,
+
+            "offsetZ":8,
+            "emitterLifetime": 8,
+            "bLoop": true,
+            "velocityRangeZ":1,
+            "velocityRangeX":1,
+            "velocityRangeY":1,
+            "accelX":0,
+
+            "velocityZ":15,
+            "gravity": 1,
+            "velocity": 15,
+
+            "drag": 0.99,
+            "rotationRange": 3.15,
+            "rotationRateRange": 0.5,
+            "emissionRate": 10,
+            "killOnDeactivate": false,
+            "lifetime": 5,
+            "lifetimeRange": 0.05,
+            "useWorldSpace": false,
+            "endDistance": -1
+        },
+        {
+            "spec": {
+                "shape": "pointlight",
+                "rgb": [
+                    20.0,
+                    [
+                        255,
+                        0,
+                        0
+                    ]
+                ]
+            },
+
+
+            "offsetZ":10,
+            "sizeX": 5,
+            "sizeRangeX": 1,
+            "emissionRate": 5,
+            "maxParticles": 1,
+            "lifetime": 500,
+            "bLoop": true,
+            "killOnDeactivate": true
+        }
+    ]
+}

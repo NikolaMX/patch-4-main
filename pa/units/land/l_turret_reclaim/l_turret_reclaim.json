@@ -1,0 +1,94 @@
+{
+  "display_name": "!LOC:Reclaim Turret",
+  "description": "!LOC:Reclaim Turret - Quickly reclaims wreckage in a wide area.",
+  "TEMP_texelinfo": 27.0403,
+  "attachable": {
+    "offsets": {
+      "head": [0, 0, 3],
+      "root": [0, 0, 0]
+    }
+  },
+  "audio": {
+    "loops": {
+      "build": {
+        "cue": "/SE/Construction/Fab_contruction_beam_loop",
+        "flag": "build_target_changed",
+        "should_start_func": "has_build_target",
+        "should_stop_func": "no_build_target"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/veh/fab"
+    }
+  },
+  "base_spec": "/pa/units/land/base_structure/base_structure.json",
+  "build_metal_cost": 375,
+  "buildable_types": "",
+  "command_caps": [
+    "ORDER_Reclaim"
+  ],
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/fab"
+    },
+    "died": {
+      "effect_scale": 1
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "bone_fab01",
+      "filename": "/pa/effects/specs/legion_fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "bone": "bone_fab02",
+      "filename": "/pa/effects/specs/legion_fab_spray.pfx",
+      "type": "build"
+    }
+  ],
+  "guard_layer": "WL_LandHorizontal",
+  "max_health": 1000,
+  "mesh_bounds": [9, 9, 7],
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": -30
+  },
+  "model": {
+      "filename": "/pa/units/land/l_turret_reclaim/l_turret_reclaim.papa",
+      "animtree": "/pa/units/land/l_turret_reclaim/l_turret_reclaim_anim_tree.json",
+      "arrows": 5
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "spec_id": "/pa/units/land/l_turret_reclaim/l_turret_reclaim_build_arm.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Basic",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Land",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Economy",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

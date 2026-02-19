@@ -81,11 +81,11 @@
     "walk_speed": 8
   },
   "navigation": {
-    "acceleration": 10,
+    "acceleration": 15,
     "aggressive_distance": 90,
     "brake": -1,
     "group_preference": "front",
-    "move_speed": 12,
+    "move_speed": 15,
     "turn_accel": 45,
     "turn_speed": 45,
     "turn_in_place": true
@@ -101,7 +101,7 @@
         {
           "channel": "sight",
           "layer": "surface_and_air",
-          "radius": 100,
+          "radius": 150,
           "shape": "capsule"
         }
       ]

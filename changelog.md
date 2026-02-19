@@ -32,14 +32,14 @@ This update represents a major balance pass and content overhaul for the Legion 
 ## 🚜 Land Units
 
 ### Fabricators
-*   **Fabrication Walker (Bot Fab):** Health set to **110**. Speed reduced to 12. Metal rate 10.
-*   **Armour Fabricator (Vehicle Fab):** Health reduced to 65. Speed increased to 14. Cost reduced to 150.
+*   **Fabrication Walker (Bot Fab):** Health set to **65**. Speed reduced to 14. Metal rate 10.
+*   **Armour Fabricator (Vehicle Fab):** Health set to **200**. Speed increased to 12. Cost set to **250**. Buildarm set to **16** / **1100**
 *   **Guardian (Combat Fab):** Metal cost reduced to 250. Now capable of building **Shredders**, **Liberators**, and **Reclaim Turrets**.
 *   **Advanced Fabrication Walker:** HP increased to 400. Cost reduced to 1900.
 
 ### Combat Units
 *   **Predator (Experimental T1 Vehicle):**
-    *   Cost: 100 | HP: 85 | Speed: 15 | Range: 80 | Damage: 60 | RoF: 0.55.
+    *   Cost: 100 | HP: 85 | Speed: 15 | Range: 80 | Damage: 40 | RoF: 0.6.
 *   **Lancer:** Rebalanced as a high-damage glass cannon.
     *   Health decreased 100 -> **80**.
     *   Damage increased 166 -> **215**.
@@ -51,10 +51,11 @@ This update represents a major balance pass and content overhaul for the Legion 
 *   **Purger:** Cost increased to **60**. Damage decreased 450 -> 334. Added missile target tracking and increased mesh bounds.
 *   **Maul:** Health decreased 1250 -> **1150**.
 *   **Peacekeeper:** Health decreased 170 -> 130; Range decreased 70 -> 67.5; Vision increased 105 -> 115.
-*   **Shank:** Health decreased 300 -> 250; Damage decreased 125 -> 120. Removed Splash damage.
+*   **Shank:** ~~Health decreased 300 -> 250; Damage decreased 125 -> 120. Removed Splash damage.~~
 *   **Patriot:** Acceleration/Braking decreased 120 -> 30; Turn speed decreased 720 -> 360.
-*   **Deathmark / Monstrosity:** Now prioritize Advanced Units and Structures. Cost decreased 1200 -> 1000; Now shoots a short burst of 2x 500
-*   **Enforcer:** Range decreased 100 -> **90**; Move speed increased 12 -> **15**
+*   **Deathmark** Now prioritize Advanced Units and Structures. Cost decreased 1200 -> 1000; Now shoots a short burst of 2x 500
+*   **Enforcer:** Range decreased 100 -> **95**; Move speed increased 12 -> **15**
+*   **Monstrosity:**  Now prioritize Advanced Units and Structures. Speed increased 12 -> 15 Range decreased 170 -> 140 Vision range set to 150
 ---
 
 ## ✈️ Air Units

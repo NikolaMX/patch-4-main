@@ -1,8 +1,8 @@
 {
 	"identifier": "sunrise5",
-	"display_name": "Legion Balance for major release",
-	"description": "Legion Balance Testing",
-	"author": "Anonemous2",
+	"display_name": "Legion Balance Testing Sunrise 5",
+	"description": "Legion Balance Testing Sunrise 5",
+	"author": "Legion balnce test team",
 	"signature": "not yet implemented",
 	"forum": "NA",
 	"priority": 2,
@@ -14,7 +14,7 @@
 		"expansion"
 	],
 	"context": "server",
-	"date": "2025-12-25",
+	"date": "2026-02-19",
 	"build": "120799",
 	"version": "0.1.1"
 }

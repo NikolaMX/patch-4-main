@@ -23,7 +23,7 @@
     }
   },
   "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
-  "build_metal_cost": 300,
+  "build_metal_cost": 250,
   "events": {
     "died": {
       "effect_scale": 1.4
@@ -101,7 +101,7 @@
     "acceleration": 50,
     "brake": 50,
     "group_preference": "back",
-    "move_speed": 10,
+    "move_speed": 8,
     "turn_speed": 50,
     "type": "hover"
   },

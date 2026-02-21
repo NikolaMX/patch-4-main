@@ -50,6 +50,7 @@ This update represents a major balance pass and content overhaul for the Legion 
     *   Cost reduced to 180. Speed increased to 16. Damage increased to 40.
 *   **Purger:** Cost increased to **60**. Damage decreased 450 -> 334. Added missile target tracking and increased mesh bounds.
 *   **Maul:** Health decreased 1250 -> **1150**.
+*   **Corsair:** Cost decreased from 300 to **250**. Speed decreased from 10 to **8**. Range decreased from 240 -> **160**. Rate of fire increased from 0.25 -> **0.3**. Ammo now **homes in** on targets in its final flight stage.
 *   **Peacekeeper:** Health decreased 170 -> 130; Range decreased 70 -> 67.5; Vision increased 105 -> 115.
 *   **Shank:** ~~Health decreased 300 -> 250; Damage decreased 125 -> 120. Removed Splash damage.~~
 *   **Patriot:** Acceleration/Braking decreased 120 -> 30; Turn speed decreased 720 -> 360.

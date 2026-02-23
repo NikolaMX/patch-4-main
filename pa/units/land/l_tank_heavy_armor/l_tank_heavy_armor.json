@@ -33,7 +33,16 @@
     }
   },
   "guard_layer": "WL_AnySurface",
-  "max_health": 7000,
+  "max_health": 2000,
+  "energy_efficiency_requirement": 0.9,
+  "shield": {
+        "radius": 50,
+        "max_health": 7500,
+        "recharge_rate": 100,
+        "energy_demand": 3000,
+        "cooldown_time": 30,
+        "uses_energy": true
+    },
   "mesh_bounds": [7.792, 8.354, 7.277],
   "model": {
     "animtree": "/pa/anim/anim_trees/l_tank_heavy_armor_anim_tree.json",
@@ -68,15 +77,6 @@
   "selection_icon": {
     "diameter": -14
   },
-  "tools": [
-    {
-      "aim_bone": "bone_root",
-      "fire_event": "fired0",
-      "muzzle_bone": "socket_muzzle",
-      "record_index": 0,
-      "spec_id": "/pa/units/land/l_tank_heavy_armor/l_tank_heavy_armor_tool_weapon.json"
-    }
-  ],
   "transportable": {
     "size": 1
   },
@@ -88,6 +88,24 @@
     "UNITTYPE_Land",
     "UNITTYPE_Advanced",
     "UNITTYPE_FactoryBuild",
-    "UNITTYPE_Custom1"
-  ]
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Shield"
+  ],
+  "fx_offsets": [
+        {
+            "bone": "bone_root",
+            "filename": "/pa/effects/shield_50.pfx",
+            "offset": [
+                0,
+                0,
+                0
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ],
+            "type": "shield"
+        }
+    ]
 }

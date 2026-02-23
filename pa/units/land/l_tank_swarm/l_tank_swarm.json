@@ -1,6 +1,6 @@
 {
   "display_name": "!LOC:Havoc",
-  "description": "!LOC:Lightning Tank - Shoots timed electric mines. Intercepts missiles. Attacks land and sea targets.",
+  "description": "!LOC:Lightning Tank - Shoots timed electric mines. Attacks land and sea targets.",
   "TEMP_texelinfo": 9.31488,
   "attachable": {
     "offsets": {
@@ -107,19 +107,6 @@
       ],
       "record_index": 0,
       "spec_id": "/pa/units/land/l_tank_swarm/l_tank_swarm_tool_weapon.json"
-    },
-    {
-      "aim_bone": "bone_root",
-      "muzzle_bone": [
-        "gun001",
-        "gun004",
-        "gun002",
-        "gun005",
-        "gun003",
-        "gun006"
-      ],
-      "record_index": 1,
-      "spec_id": "/pa/units/land/l_tank_swarm/l_tank_swarm_beam_tool_weapon.json"
     }
   ],
   "transportable": {

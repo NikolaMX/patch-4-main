@@ -2,7 +2,7 @@
   "audio_loop": "/SE/Movement/missile/tactical_missile_fly_loop",
   "base_spec": "/pa/ammo/base_bullet/base_bullet.json",
   "flight_type": "Staged",
-  "damage": 40,
+  "damage": 60,
   "events": {
     "died": {
       "audio_cue": "/SE/Impacts/shell_artillery",
@@ -48,6 +48,6 @@
       "rotates_to_velocity": true
     }
   ],
-  "splash_damage": 40,
-  "splash_radius": 5
+  "splash_damage": 60,
+  "splash_radius": 10
 }

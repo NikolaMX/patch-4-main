@@ -6,11 +6,11 @@
   "base_spec": "/pa/tools/base_bot_weapon/base_bot_weapon.json",
   "idle_aim_delay": 10,
   "max_firing_velocity": 150,
-  "max_range": 240,
+  "max_range": 160,
   "min_firing_velocity": 1,
   "pitch_range": 89,
   "pitch_rate": 45,
-  "rate_of_fire": 0.25,
+  "rate_of_fire": 0.3,
   "spread_fire": true,
   "target_layers": ["WL_LandHorizontal", "WL_Seafloor", "WL_WaterSurface"],
   "yaw_range": 180,
@@ -22,5 +22,6 @@
     "Mobile - Air",
     "Structure - Wall",
     "Wall"
-  ]
+  ],
+  "default_firing_pitch": -65
 }

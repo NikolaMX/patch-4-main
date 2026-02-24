@@ -33,45 +33,53 @@
       "filename": "/pa/units/land/l_shield_gen/shield.pfx",
       "offset": [0, 0, 0],
       "orientation": [0, 0, 0],
-      "type": "energy"
+      "type": "shield"
     },
     {
       "bone": "bone_rotator",
       "filename": "/pa/units/land/l_shield_gen/shield_rotator.pfx",
       "offset": [0, 0, 0],
       "orientation": [0, 0, 0],
-      "type": "energy"
+      "type": "shield"
     },
     {
       "bone": "bone_arm_pivot_1",
       "filename": "/pa/units/land/l_shield_gen/shield_arm.pfx",
       "offset": [0, 2.3, 6.8],
       "orientation": [0, 0, 0],
-      "type": "energy"
+      "type": "shield"
     },
     {
       "bone": "bone_arm_pivot_2",
       "filename": "/pa/units/land/l_shield_gen/shield_arm.pfx",
       "offset": [0, 2.3, 6.8],
       "orientation": [0, 0, 0],
-      "type": "energy"
+      "type": "shield"
     },
     {
       "bone": "bone_arm_pivot_3",
       "filename": "/pa/units/land/l_shield_gen/shield_arm.pfx",
       "offset": [0, 2.3, 6.8],
       "orientation": [0, 0, 0],
-      "type": "energy"
+      "type": "shield"
     },
     {
       "bone": "bone_arm_pivot_4",
       "filename": "/pa/units/land/l_shield_gen/shield_arm.pfx",
       "offset": [0, 2.3, 6.8],
       "orientation": [0, 0, 0],
-      "type": "energy"
+      "type": "shield"
     }
   ],
   "max_health": 1500,
+    "shield": {
+        "radius": 100,
+        "max_health": 15000,
+        "recharge_rate": 200,
+        "energy_demand": 6000,
+        "cooldown_time": 30,
+        "uses_energy": true
+    },
   "mesh_bounds": [15, 15, 13.5],
   "model": [
     {
@@ -113,12 +121,6 @@
     "diameter": -25
   },
   "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
-  "tools": [
-    {
-      "aim_bone": "bone_void",
-      "spec_id": "/pa/units/land/l_shield_gen/l_shield_gen_long_tool_weapon.json"
-    }
-  ],
   "unit_types": [
     "UNITTYPE_Structure",
     "UNITTYPE_Advanced",

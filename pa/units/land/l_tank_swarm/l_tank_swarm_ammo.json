@@ -13,7 +13,7 @@
   },
   "initial_velocity": 200.0,
   "lifetime": 2,
-  "max_velocity": 300.0,
+  "max_velocity": 200.0,
   "physics": {
     "add_to_spatial_db": true,
     "gravity_scalar": 5,
@@ -33,11 +33,11 @@
     },
     {
       "ignores_LOS": false,
-      "ignores_gravity": false,
+      "ignores_gravity": true,
       "rotates_to_velocity": true,
       "stage_duration": 5000,
       "stage_turn_rate": 900
     }
   ],
-  "turn_rate": 200
+  "turn_rate": 270
 }

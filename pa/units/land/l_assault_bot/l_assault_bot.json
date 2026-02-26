@@ -30,7 +30,7 @@
         "recharge_rate": 5,
         "energy_demand": 30,
         "cooldown_time": 10,
-        "uses_energy": true
+        "recharge_requires_efficiency": true
     },
   "mesh_bounds": [4, 2.5, 4],
   "model": {

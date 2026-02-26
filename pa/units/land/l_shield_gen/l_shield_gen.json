@@ -47,28 +47,28 @@
       "filename": "/pa/units/land/l_shield_gen/shield_arm.pfx",
       "offset": [0, 2.3, 6.8],
       "orientation": [0, 0, 0],
-      "type": "shield"
+      "type": "energy"
     },
     {
       "bone": "bone_arm_pivot_2",
       "filename": "/pa/units/land/l_shield_gen/shield_arm.pfx",
       "offset": [0, 2.3, 6.8],
       "orientation": [0, 0, 0],
-      "type": "shield"
+      "type": "energy"
     },
     {
       "bone": "bone_arm_pivot_3",
       "filename": "/pa/units/land/l_shield_gen/shield_arm.pfx",
       "offset": [0, 2.3, 6.8],
       "orientation": [0, 0, 0],
-      "type": "shield"
+      "type": "energy"
     },
     {
       "bone": "bone_arm_pivot_4",
       "filename": "/pa/units/land/l_shield_gen/shield_arm.pfx",
       "offset": [0, 2.3, 6.8],
       "orientation": [0, 0, 0],
-      "type": "shield"
+      "type": "energy"
     }
   ],
   "max_health": 1500,
@@ -78,7 +78,7 @@
         "recharge_rate": 200,
         "energy_demand": 6000,
         "cooldown_time": 30,
-        "uses_energy": true
+        "recharge_requires_efficiency": true
     },
   "mesh_bounds": [15, 15, 13.5],
   "model": [

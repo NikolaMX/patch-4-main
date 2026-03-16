@@ -1,6 +1,6 @@
 {
   "display_name": "!LOC:Earthshaker",
-  "description": "!LOC:Seismic Tank - Heavily armored. Short range. Huge splash damage. Attacks land and sea targets.",
+  "description": "!LOC:Shield Generator. Generates a rapidly recharging bubble shield that will absorb most projectiles.",
   "TEMP_texelinfo": 9.04444,
   "attachable": {
     "offsets": {
@@ -36,7 +36,7 @@
   "max_health": 2000,
   "energy_efficiency_requirement": 0.9,
   "shield": {
-        "radius": 50,
+        "radius": 75,
         "max_health": 7500,
         "recharge_rate": 300,
         "energy_demand": 3000,
@@ -53,7 +53,7 @@
     "brake": 100,
     "group_preference": "front",
     "move_speed": 10,
-    "turn_speed": 180
+    "turn_speed": 60
   },
   "physics": {
     "radius": 6
@@ -94,7 +94,7 @@
   "fx_offsets": [
         {
             "bone": "bone_root",
-            "filename": "/pa/effects/shield_50.pfx",
+            "filename": "/pa/effects/shield_hex_75.pfx",
             "offset": [
                 0,
                 0,

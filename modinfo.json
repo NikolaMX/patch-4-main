@@ -6,7 +6,7 @@
 	"signature": "not yet implemented",
 	"forum": "NA",
 	"priority": 2,
-	"icon": "sunrise.png",
+	"icon": "https://raw.githubusercontent.com/NikolaMX/patch-4-main/blob/main/sunrise.png",
 	"titansOnly": true,
 	"category": [
 		"balance",

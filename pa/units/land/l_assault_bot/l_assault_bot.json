@@ -22,12 +22,12 @@
     }
   },
   "guard_layer": "WL_AnySurface",
-  "max_health": 85,
+  "max_health": 60,
   "energy_efficiency_requirement": 0.9,
   "shield": {
         "radius": 1,
         "max_health": 35,
-        "recharge_rate": 5,
+        "recharge_rate": 2.5,
         "energy_demand": 30,
         "cooldown_time": 10,
         "recharge_requires_efficiency": true

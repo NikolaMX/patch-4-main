@@ -37,9 +37,9 @@
   "energy_efficiency_requirement": 0.9,
   "shield": {
         "radius": 75,
-        "max_health": 7500,
+        "max_health": 5000,
         "recharge_rate": 300,
-        "energy_demand": 3000,
+        "energy_demand": 2000,
         "cooldown_time": 10,
         "recharge_requires_efficiency": true
     },

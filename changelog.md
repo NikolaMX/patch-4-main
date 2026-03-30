@@ -32,7 +32,7 @@ This update represents a major balance pass and content overhaul for the Legion 
 ## 🚜 Land Units
 
 ### Fabricators
-*   **Fabrication Walker (Bot Fab):** Health set to **65**. Speed reduced to 14. Metal rate 10.
+*   **Fabrication Walker (Bot Fab):** Health set to **30**. Shield set to **30** Speed set to 15. Metal rate 9.
 *   **Armour Fabricator (Vehicle Fab):** Health set to **200**. Speed increased to 12. Cost set to **250**. Buildarm set to **16** / **1100**
 *   **Guardian (Combat Fab):** Metal cost reduced to 250. Now capable of building **Shredders**, **Liberators**, and **Reclaim Turrets**.
 *   **Advanced Fabrication Walker:** HP increased to 400. Cost reduced to 1900.
@@ -41,17 +41,18 @@ This update represents a major balance pass and content overhaul for the Legion 
 *   **Predator (Experimental T1 Vehicle):**
     *   Cost: 100 | HP: 85 | Speed: 15 | Range: 80 | Damage: 40 | RoF: 0.6.
 *   **Lancer:** Rebalanced as a high-damage glass cannon.
-    *   Health decreased 100 -> **80**.
-    *   Damage increased 166 -> **215**.
+    *   Build cost decreased 150 -> **125**
+    *   Health decreased 100 -> **60**.
+    *   Damage increased 166 -> **225**.
     *   Range increased 70 -> **75** (Matches Dox range).
-    *   Rate of Fire decreased 0.61 -> 0.5.
+    *   Rate of Fire decreased 0.61 -> **0.4**.
 *   **Stoke (Rework):** Now a dedicated Anti-Air platform.
     *   **Targeting:** Can ONLY target air units.
     *   Cost reduced to 180. Speed increased to 16. Damage increased to 40.
 *   **Purger:** Cost increased to **60**. Damage decreased 450 -> 334. Added missile target tracking and increased mesh bounds.
 *   **Maul:** Health decreased 1250 -> **1150**.
 *   **Corsair:** Cost decreased from 300 to **200**. Speed decreased from 10 to **8**. Range decreased from 240 -> **160**. Damage increased 40 -> **60**. Rate of fire increased from 0.25 -> **0.3**. Ammo now **homes in** on targets in its final flight stage.
-*   **Peacekeeper:** Health decreased 170 -> 85; Personal Shield added with **35 HP**. Range decreased 70 -> 67.5; Vision increased 105 -> 115.
+*   **Peacekeeper:** Health decreased 170 -> 60; Personal Shield added with **35 HP**. Range decreased 70 -> 67.5; Vision increased 105 -> 115. Replaced amphibious with land-small
 *   **Shank:** ~~Health decreased 300 -> 250; Damage decreased 125 -> 120. Removed Splash damage.~~
 *   **Patriot:** Acceleration/Braking decreased 120 -> 30; Turn speed decreased 720 -> 360.
 *   **Havoc** Anti-Missile Removed.

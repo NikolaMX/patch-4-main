@@ -1,7 +1,7 @@
 
 {
   "display_name": "!LOC:Fabrication Walker",
-  "description": "!LOC:Builder - Builds basic structures. Cheap. Less powerful than other builders.",
+  "description": "!LOC:Shielded Builder - Builds basic structures. Protected by a personal shield. Cheap. Less powerful than other builders.",
   "TEMP_texelinfo": 5,
   "attachable": {
     "offsets": {
@@ -90,7 +90,7 @@
       "idle": "/pa/units/land/l_fabrication_bot/nl_fab_bot_idle.papa",
       "walk": "/pa/units/land/l_fabrication_bot/nl_fab_bot_run.papa"
     },
-    "animtree": "/pa/anim/anim_trees/l_fabrication_bot_anim_tree.json",
+    "animtree": "/pa/units/land/l_fabrication_bot/nl_fabrication_bot_anim_tree.json",
     "filename": "/pa/units/land/l_fabrication_bot/nl_fab_bot.papa",
     "walk_speed": 8
   },

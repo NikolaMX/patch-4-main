@@ -56,10 +56,34 @@
       "bone": "socket_muzzle",
       "filename": "/pa/effects/specs/legion_fab_spray.pfx",
       "type": "build"
-    }
+    },
+    {
+            "bone": "bone_body",
+            "filename": "/pa/effects/shield_6.pfx",
+            "offset": [
+                0,
+                0,
+                -2
+            ],
+            "orientation": [
+                0,
+                0,
+                0
+            ],
+            "type": "shield"
+        }
   ],
   "guard_layer": "WL_LandHorizontal",
-  "max_health": 65,
+  "max_health": 30,
+  "energy_efficiency_requirement": 0.9,
+  "shield": {
+        "radius": 1,
+        "max_health": 30,
+        "recharge_rate": 1.5,
+        "energy_demand": 30,
+        "cooldown_time": 10,
+        "recharge_requires_efficiency": true
+    },
   "mesh_bounds": [3, 2, 4.5],
   "model": {
     "animations": {

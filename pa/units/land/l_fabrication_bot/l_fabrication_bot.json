@@ -59,11 +59,11 @@
     },
     {
             "bone": "bone_body",
-            "filename": "/pa/effects/shield_6.pfx",
+            "filename": "/pa/effects/shield_hex_6.pfx",
             "offset": [
                 0,
                 0,
-                -2
+                0
             ],
             "orientation": [
                 0,

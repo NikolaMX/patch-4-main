@@ -98,3 +98,28 @@ This update represents a major balance pass and content overhaul for the Legion 
 *   **Bugfixes:** 
     *   Sea Urchin: Added missing unit type.
     *   Fabricators: Regular fabricators can no longer build Spoilers.
+
+---
+
+## Patch 0.1.2 (2026-04-15)
+
+### Shields
+*   **Tactical Missiles Now Ignore Shields:** The following units' anti-surface missiles now have `ignore_shields: true`:
+    *   **Catapult** (Tactical Missile Launcher)
+    *   **Bluehawk** (Bot Tactical Missile)
+    *   **Hornet** (Advanced Bomber)
+    *   **Stingray** (Missile Ship) — main tactical missiles only; AA missiles unaffected.
+    *   **Kraken** (Nuclear Sub) — surface missiles only; torpedoes unaffected.
+*   **Fabrication Walker Shield:** Updated shield VFX to new hex sphere effect (`shield_hex_6.pfx`). Removed `energy_efficiency_requirement` and `recharge_requires_efficiency` from shield. Adjusted effect offset.
+
+### Balance Changes
+*   **Sniper Bot:** Health increased 60 -> **70**. Range increased 75 -> **80**.
+*   **Panzer (Heavy Armour Tank):** Cost decreased 1800 -> **1400**.
+*   **Transport:** Cost increased 140 -> **200**. Health decreased 55 -> **50**. Speed decreased 100 -> **85**.
+*   **Havoc (Hover Tank Adv):** Anti-drop weapon now targets **Air and Orbital only** (removed Land and Water Surface targeting).
+
+*   **Power Catalyst (Energy Plant):** Energy production increased 600 -> **650**.
+*   **Dauntless Bomber:** Now drops **1 bomb per pass** instead of 2 (ammo per shot 212 -> 424).
+
+### Visuals
+*   **New Shield VFX:** Added `shield_hex_6.pfx` — hex sphere shield effect with pulsing face animation.

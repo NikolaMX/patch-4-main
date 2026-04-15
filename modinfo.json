@@ -1,7 +1,7 @@
 {
 	"identifier": "sunrise5_Shields",
-	"display_name": "Legion Balance Testing Sunrise 5 + Shields",
-	"description": "Legion Balance Testing Sunrise 5 + Shields",
+	"display_name": "Legion Balance Testing Sunrise 6.5 + Shields",
+	"description": "Legion Balance Testing Sunrise 6.5 + Shields",
 	"author": "Legion balnce test team",
 	"signature": "not yet implemented",
 	"forum": "NA",
@@ -14,7 +14,7 @@
 		"expansion"
 	],
 	"context": "server",
-	"date": "2026-02-23",
-	"build": "120799",
-	"version": "0.1.1"
+	"date": "2026-04-15",
+	"build": "124635",
+	"version": "0.1.2"
 }

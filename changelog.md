@@ -110,6 +110,7 @@ This update represents a major balance pass and content overhaul for the Legion 
     *   **Hornet** (Advanced Bomber)
     *   **Stingray** (Missile Ship) — main tactical missiles only; AA missiles unaffected.
     *   **Kraken** (Nuclear Sub) — surface missiles only; torpedoes unaffected.
+    *   **Spark** (Tesla Bot)
 *   **Fabrication Walker Shield:** Updated shield VFX to new hex sphere effect (`shield_hex_6.pfx`). Removed `energy_efficiency_requirement` and `recharge_requires_efficiency` from shield. Adjusted effect offset.
 
 ### Balance Changes

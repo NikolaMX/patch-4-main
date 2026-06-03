@@ -1,0 +1,62 @@
+{
+  "base_spec": "/pa/units/land/l_teleporter/l_teleporter_assets.json",
+  "display_name": "!LOC:Sky Bridge",
+  "description": "!LOC:Teleporter - Link teleporters to move units around the system.",
+  "area_build_type": "Line",
+  "atrophy_cool_down": 15,
+  "atrophy_rate": 6.66667,
+  "build_metal_cost": 1000,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Attack",
+    "ORDER_Assist",
+    "ORDER_Use"
+  ],
+  "energy_efficiency_requirement": 1,
+  "flip_drag_orientation": true,
+  "max_health": 7000,
+  "mesh_bounds": [42.4, 30, 34],
+  "orders": {
+    "handler_type": "inert"
+  },
+  "placement_size": [50, 75],
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "teleporter": {
+    "energy_demand": 1000
+  },
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Teleporter",
+    "UNITTYPE_CmdBuild",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_FabOrbBuild",
+    "UNITTYPE_Custom1"
+  ],
+  "useable": {
+    "range": 100,
+    "type": "teleporter"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "base_spec": "/pa/units/air/l_bomber_heavy/l_bomber_heavy.json",
+  
+  "tools": [
+    {
+      "aim_bone": "bone_altDrop",
+      "fire_event": "fired0",
+      "muzzle_bone": "bone_altDrop",
+      "record_index": 0,
+      "secondary_weapon": true,
+      "spec_id": "/pa/units/air/l_firestarter/l_firestarter_turret_tool_weapon.json"
+    },
+    {
+      "aim_bone": "bone_root",
+      "fire_event": "fired1",
+      "muzzle_bone": "bone_fireDrop",
+      "primary_weapon": true,
+      "projectiles_per_fire": 1,
+      "record_index": 1,
+      "spec_id": "/pa/units/air/l_firestarter/l_firestarter_flame_drop_tool_weapon.json"
+    }
+  ]
+}

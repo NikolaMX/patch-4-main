@@ -4,8 +4,16 @@
   "TEMP_texelinfo": 5,
   "attachable": {
     "offsets": {
-      "head": [0, 0, 4.3],
-      "root": [0, 0, 0]
+      "head": [
+        0,
+        0,
+        4.3
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
     }
   },
   "audio": {
@@ -52,27 +60,32 @@
   },
   "fx_offsets": [
     {
-      "bone": "muzzle01",
+      "bone": "socket_left_muzzle",
       "filename": "/pa/effects/specs/legion_fab_spray.pfx",
       "type": "build"
     },
     {
-      "bone": "muzzle02",
+      "bone": "socket_right_muzzle",
       "filename": "/pa/effects/specs/legion_fab_spray.pfx",
       "type": "build"
     }
   ],
   "guard_layer": "WL_LandHorizontal",
   "max_health": 400,
-  "mesh_bounds": [4, 2, 5],
+  "mesh_bounds": [
+    4,
+    2,
+    5
+  ],
   "model": {
     "animations": {
-      "idle": "/pa/units/land/l_fabrication_bot_adv/l_fabrication_bot_adv_idle.papa",
-      "walk": "/pa/units/land/l_fabrication_bot_adv/l_fabrication_bot_adv_walk.papa"
+      "dead": "/pa/units/land/l_fabrication_bot_adv/l_fabrication_bot_adv_anim_dead.papa",
+      "idle": "/pa/units/land/l_fabrication_bot_adv/l_fabrication_bot_adv_anim_idle.papa",
+      "walk": "/pa/units/land/l_fabrication_bot_adv/l_fabrication_bot_adv_anim_walk.papa"
     },
     "animtree": "/pa/anim/anim_trees/l_fabrication_bot_adv_anim_tree.json",
     "filename": "/pa/units/land/l_fabrication_bot_adv/l_fabrication_bot_adv.papa",
-    "walk_speed": 3
+    "walk_speed": 4.8
   },
   "navigation": {
     "acceleration": 120,
@@ -104,7 +117,7 @@
     }
   },
   "selection_icon": {
-    "diameter": -9
+    "diameter": -15
   },
   "tools": [
     {
@@ -125,5 +138,6 @@
     "UNITTYPE_FactoryBuild",
     "UNITTYPE_CannonBuildable",
     "UNITTYPE_Custom1"
-  ]
+  ],
+  "has_death_effects": true
 }

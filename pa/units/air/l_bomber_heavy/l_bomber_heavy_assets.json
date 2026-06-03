@@ -1,0 +1,92 @@
+{
+  "base_spec": "/pa/units/air/base_flyer/base_flyer.json",
+  "TEMP_texelinfo": 7,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/air/air_bomber_siege_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/air/bomber_T2"
+    }
+  },
+  "events": {
+    "died": {
+      "effect_scale": 0.85,
+      "effect_spec": "/pa/units/air/base_flyer/base_flyer_death_t2.pfx"
+    },
+    "fired0": {
+      "audio_cue": "/SE/Weapons/structure/artillery_short_fire"
+    },
+    "fired1": {
+      "audio_cue": "/SE/Weapons/veh/tank_flame",
+      "effect_spec": "/pa/units/air/l_bomber_heavy/bottom_fire.pfx bone_body"
+    },
+    "fired2": {
+      "audio_cue": "/SE/Weapons/bot/sniper_fire_anti_tac",
+      "effect_spec": "/pa/units/land/bot_sniper/bot_sniper_beam_flash.pfx bone_body"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "socket_rear_thruster_left",
+      "filename": "/pa/units/air/l_base_flyer/jet_adv.pfx",
+      "type": "moving"
+    },
+    {
+      "bone": "socket_rear_thruster_right",
+      "filename": "/pa/units/air/l_base_flyer/jet_adv.pfx",
+      "type": "moving"
+    },
+
+    {
+      "bone": "socket_thruster_outter_left",
+      "filename": "/pa/units/air/l_base_flyer/jet_adv.pfx",
+      "type": "moving_forward"
+    },
+    {
+      "bone": "socket_thruster_inner_left",
+      "filename": "/pa/units/air/l_base_flyer/jet_adv.pfx",
+      "type": "moving_forward"
+    },
+    {
+      "bone": "socket_thruster_inner_right",
+      "filename": "/pa/units/air/l_base_flyer/jet_adv.pfx",
+      "type": "moving_forward"
+    },
+    {
+      "bone": "socket_thruster_outter_right",
+      "filename": "/pa/units/air/l_base_flyer/jet_adv.pfx",
+      "type": "moving_forward"
+    },
+    
+    {
+      "bone": "socket_trailLeft",
+      "filename": "/pa/units/air/l_base_flyer/wing_tip_line.pfx",
+      "type": "moving_forward"
+    },
+    {
+      "bone": "socket_trailRight",
+      "filename": "/pa/units/air/l_base_flyer/wing_tip_line.pfx",
+      "type": "moving_forward"
+    }
+  ],
+  "model": {
+    "animations": {
+      "fly": "/pa/units/air/l_bomber_heavy/l_bomber_heavy_anim_fly.papa",
+      "idle": "/pa/units/air/l_bomber_heavy/l_bomber_heavy_anim_idle.papa",
+      "build": "/pa/units/air/l_bomber_heavy/l_bomber_heavy_anim_build.papa",
+      "deploy": "/pa/units/air/l_bomber_heavy/l_bomber_heavy_anim_deploy.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/bomber_heavy_anim_tree.json",
+    "filename": "/pa/units/air/l_bomber_heavy/l_bomber_heavy.papa"
+  },
+  "selection_icon": {
+    "diameter": -30.0,
+    "vertical_offset": -2.0
+  }
+}

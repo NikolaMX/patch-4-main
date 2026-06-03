@@ -1,0 +1,5 @@
+{
+    "diffuse":  "/pa/effects/textures/skirts/l_skirt_teleporter_diffuse.papa",
+    "normal":   "/pa/effects/textures/skirts/l_skirt_teleporter_normal.papa",
+    "material": "/pa/effects/textures/skirts/l_skirt_teleporter_material.papa"
+}

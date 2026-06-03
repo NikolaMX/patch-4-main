@@ -25,44 +25,56 @@
   "fx_offsets": [
     {
       "bone": "socket_thrustRight",
-      "filename": "/pa/units/air/l_fighter/fighter_lines_thrust.pfx",
+      "filename": "/pa/units/air/l_base_flyer/thrust_line.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thrustLeft",
-      "filename": "/pa/units/air/l_fighter/fighter_lines_thrust.pfx",
+      "filename": "/pa/units/air/l_base_flyer/thrust_line.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thrustRight",
-      "filename": "/pa/units/air/l_fighter/fighter_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thrustLeft",
-      "filename": "/pa/units/air/l_fighter/fighter_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "bone_wingLeft",
-      "filename": "/pa/units/air/l_fighter/fighter_lines.pfx",
-      "offset": [1.65, 0, 0],
+      "filename": "/pa/units/air/l_base_flyer/wing_tip_line.pfx",
+      "offset": [
+        1.65,
+        0,
+        0
+      ],
       "type": "moving_forward"
     },
     {
       "bone": "bone_wingRight",
-      "filename": "/pa/units/air/l_fighter/fighter_lines.pfx",
-      "offset": [-1.65, 0, 0],
+      "filename": "/pa/units/air/l_base_flyer/wing_tip_line.pfx",
+      "offset": [
+        -1.65,
+        0,
+        0
+      ],
       "type": "moving_forward"
     }
   ],
   "guard_layer": "WL_Air",
   "max_health": 120,
-  "mesh_bounds": [6.5, 9, 3.1],
+  "mesh_bounds": [
+    6.5,
+    9,
+    3.1
+  ],
   "model": {
-    "filename": "/pa/units/air/l_fighter/nl_fighter.papa",
+    "filename": "/pa/units/air/l_fighter/l_fighter.papa",
     "animations": {
-      "fly":    "/pa/units/air/l_fighter/nl_fighter_anim_fly.papa"
+      "fly": "/pa/units/air/l_fighter/l_fighter_anim_fly.papa"
     },
     "animtree": "/pa/anim/anim_trees/transport_anim_tree.json"
   },
@@ -97,7 +109,10 @@
   "tools": [
     {
       "aim_bone": "bone_root",
-      "muzzle_bone": ["socket_muzzleLeft", "socket_muzzleRight"],
+      "muzzle_bone": [
+        "socket_muzzleLeft",
+        "socket_muzzleRight"
+      ],
       "projectiles_per_fire": 2,
       "spec_id": "/pa/units/air/l_fighter/l_fighter_tool_weapon.json"
     }

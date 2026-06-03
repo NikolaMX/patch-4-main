@@ -35,13 +35,23 @@
   ],
   "events": {
     "fired": {
-      "effect_spec": "/pa/units/air/l_air_bomb/l_air_bomb_fire.pfx bone_root"
+      "effect_spec": "/pa/units/air/l_air_bomb/target_fire.pfx socket_bomb"
     }
   },
   "fx_offsets": [
     {
-      "bone": "bone_root",
-      "filename": "/pa/units/air/l_air_bomb/l_air_bomb.pfx",
+      "bone": "socket_bomb",
+      "filename": "/pa/units/air/l_air_bomb/energy_ball.pfx",
+      "type": "idle"
+    },
+    {
+      "bone": "socket_thruster_right",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
+      "type": "idle"
+    },
+    {
+      "bone": "socket_thruster_left",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "idle"
     }
   ],
@@ -55,15 +65,16 @@
   ],
   "model": {
     "animations": {
-      "idle": "/pa/units/air/l_air_bomb/l_air_bomb_idle.papa"
+      "idle": "/pa/units/air/l_air_bomb/l_air_bomb_anim_idle.papa",
+      "fly": "/pa/units/air/l_air_bomb/l_air_bomb_anim_fly.papa"
     },
-    "animtree": "/pa/anim/anim_trees/constant_idle_anim_tree.json",
+    "animtree": "/pa/anim/anim_trees/l_air_bomb_anim_tree.json",
     "filename": "/pa/units/air/l_air_bomb/l_air_bomb.papa"
   },
   "navigation": {
     "acceleration": 180,
     "brake": 120,
-    "move_speed": 90,
+    "move_speed": 95,
     "turn_speed": 1080,
     "wobble_factor": 0.25,
     "wobble_speed": 0.2

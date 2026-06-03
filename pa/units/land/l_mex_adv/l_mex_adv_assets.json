@@ -1,0 +1,33 @@
+{
+  "TEMP_texelinfo": 24.4307,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/metal"
+    }
+  },
+  "base_spec": "/pa/units/land/base_structure/base_structure.json",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/metal"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Factory",
+      "effect_scale": 0.8
+    }
+  },
+  "icon_vertical_offset": 5,
+  "lamps": [],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/l_mex_adv/l_mex_adv_anim_idle.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/simple_building_anim_tree.json",
+    "arrows": 10,
+    "filename": "/pa/units/land/l_mex_adv/l_mex_adv.papa",
+    "layer": "WL_LandHorizontal"
+  },
+  "selection_icon": {
+    "diameter": -32
+  },
+  "strategic_icon_priority": 5
+}

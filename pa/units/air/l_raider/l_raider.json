@@ -4,7 +4,11 @@
   "TEMP_texelinfo": 8,
   "attachable": {
     "offsets": {
-      "root": [0, 0, 0]
+      "root": [
+        0,
+        0,
+        0
+      ]
     }
   },
   "audio": {
@@ -26,61 +30,68 @@
     "died": {
       "effect_scale": 0.75
     },
-    "fired": {
+    "fired0": {
       "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire",
       "effect_scale": 2
     }
   },
   "fx_offsets": [
     {
-      "bone": "extake001",
-      "filename": "/pa/units/air/l_raider/raider_jets.pfx",
+      "bone": "socket_thruster_left",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
-      "bone": "extake002",
-      "filename": "/pa/units/air/l_raider/raider_jets.pfx",
+      "bone": "socket_thruster_right",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
-      "bone": "extake003",
-      "filename": "/pa/units/air/l_raider/raider_jets.pfx",
+      "bone": "socket_thruster",
+      "filename": "/pa/units/air/l_base_flyer/jet.pfx",
+      "type": "moving"
+    },
+    {
+      "bone": "socket_thruster",
+      "filename": "/pa/units/air/l_base_flyer/thrust_line.pfx",
       "type": "moving_forward"
     },
     {
-      "bone": "extake001",
-      "filename": "/pa/units/air/l_raider/raider_lines_thrust.pfx",
-      "type": "moving_forward"
+      "bone": "bone_wing_left",
+      "filename": "/pa/units/air/l_base_flyer/wing_tip_line.pfx",
+      "type": "moving_forward",
+      "offset": [
+        -1.0,
+        2.4,
+        0.0
+      ]
     },
     {
-      "bone": "extake002",
-      "filename": "/pa/units/air/l_raider/raider_lines_thrust.pfx",
-      "type": "moving_forward"
-    },
-    {
-      "bone": "extake003",
-      "filename": "/pa/units/air/l_raider/raider_lines_thrust.pfx",
-      "type": "moving_forward"
-    },
-    {
-      "bone": "fin002",
-      "filename": "/pa/units/air/l_raider/raider_lines.pfx",
-      "type": "moving_forward"
-    },
-    {
-      "bone": "fin003",
-      "filename": "/pa/units/air/l_raider/raider_lines.pfx",
-      "type": "moving_forward"
+      "bone": "bone_wing_right",
+      "filename": "/pa/units/air/l_base_flyer/wing_tip_line.pfx",
+      "type": "moving_forward",
+      "offset": [
+        0.0,
+        2.4,
+        -1.0
+      ]
     }
   ],
   "guard_layer": "WL_AnySurface",
   "guard_radius": 50,
   "max_health": 40,
-  "mesh_bounds": [14, 7.5, 2.6],
+  "mesh_bounds": [
+    14,
+    7.5,
+    2.6
+  ],
   "model": {
-    "animtree": "/pa/anim/anim_trees/l_raider_anim_tree.json",
     "arrows": 5,
-    "filename": "/pa/units/air/l_raider/l_raider.papa"
+    "filename": "/pa/units/air/l_raider/l_raider.papa",
+    "animations": {
+      "fly": "/pa/units/air/l_raider/l_raider_anim_fly.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/l_raider_anim_tree.json"
   },
   "navigation": {
     "acceleration": 130,
@@ -125,8 +136,11 @@
   "maintain_priority_target": false,
   "tools": [
     {
-      "aim_bone": "bone_root",
-      "muzzle_bone": ["right_muzzle", "left_muzzle"],
+      "aim_bone": "bone_body",
+      "muzzle_bone": [
+        "socket_muzzle"
+      ],
+      "fire_event": "fired0",
       "record_index": 0,
       "spec_id": "/pa/units/air/l_raider/l_raider_tool_weapon.json"
     }

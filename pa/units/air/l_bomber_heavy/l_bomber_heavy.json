@@ -1,0 +1,85 @@
+{
+  "base_spec": "/pa/units/air/l_bomber_heavy/l_bomber_heavy_assets.json",
+  "display_name": "!LOC:Salamander",
+  "description": "!LOC:Napalm Bomber - High damage over a wide area. Heavily armored. Deploys flamethrower turrets. Attacks land and sea targets.",
+  "build_metal_cost": 900,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack",
+    "ORDER_Assist",
+    "ORDER_Use"
+  ],
+  "guard_layer": "WL_AnySurface",
+  "max_health": 1100,
+  "mesh_bounds": [
+    11,
+    15,
+    8
+  ],
+  "navigation": {
+    "acceleration": 60,
+    "aggressive_distance": 60.0,
+    "bank_factor": 0.5,
+    "brake": 20,
+    "dodge_multiplier": 0.0,
+    "dodge_radius": 0,
+    "move_speed": 40,
+    "turn_speed": 120,
+    "wobble_factor": 0.05,
+    "wobble_speed": 0.1
+  },
+  "physics": {
+    "allow_pushing": false,
+    "push_sideways": false
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 200,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 200,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "tools": [
+    {
+      "aim_bone": "socket_bomb",
+      "fire_event": "fired0",
+      "muzzle_bone": "socket_bomb",
+      "record_index": 0,
+      "secondary_weapon": true,
+      "spec_id": "/pa/units/air/l_bomber_heavy/l_bomber_heavy_turret_tool_weapon.json"
+    },
+    {
+      "aim_bone": "bone_body",
+      "fire_event": "fired1",
+      "muzzle_bone": [
+        "socket_muzzle_left",
+        "socket_muzzle_right"
+      ],
+      "primary_weapon": true,
+      "projectiles_per_fire": 1,
+      "record_index": 1,
+      "spec_id": "/pa/units/air/l_bomber_heavy/l_bomber_heavy_flame_drop_tool_weapon.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bomber",
+    "UNITTYPE_Air",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

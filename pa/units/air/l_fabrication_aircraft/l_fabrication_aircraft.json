@@ -4,8 +4,16 @@
   "TEMP_texelinfo": 7.11877,
   "attachable": {
     "offsets": {
-      "head": [0, 0, 4],
-      "root": [0, 0, 0]
+      "head": [
+        0,
+        0,
+        4
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
     }
   },
   "audio": {
@@ -52,42 +60,46 @@
     },
     {
       "bone": "socket_thruster_1",
-      "filename": "/pa/units/air/fabrication_aircraft/fabrication_aircraft_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet.pfx",
       "type": "moving"
     },
     {
       "bone": "socket_thruster_2",
-      "filename": "/pa/units/air/fabrication_aircraft/fabrication_aircraft_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet.pfx",
       "type": "moving"
     },
     {
       "bone": "socket_thruster_3",
-      "filename": "/pa/units/air/fabrication_aircraft/fabrication_aircraft_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet.pfx",
       "type": "moving"
     },
     {
       "bone": "socket_thruster_4",
-      "filename": "/pa/units/air/fabrication_aircraft/fabrication_aircraft_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet.pfx",
       "type": "moving"
     },
     {
       "bone": "socket_thrusterRearRight",
-      "filename": "/pa/units/air/l_fighter/fighter_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thrusterRearLeft",
-      "filename": "/pa/units/air/l_fighter/fighter_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     }
   ],
   "guard_layer": "WL_LandHorizontal",
   "max_health": 85,
-  "mesh_bounds": [7, 7, 4],
+  "mesh_bounds": [
+    7,
+    7,
+    4
+  ],
   "model": {
     "animations": {},
     "animtree": "/pa/anim/anim_trees/fabrication_aircraft_anim_tree.json",
-    "filename": "/pa/units/air/l_fabrication_aircraft/nl_fabrication_aircraft.papa"
+    "filename": "/pa/units/air/l_fabrication_aircraft/l_fabrication_aircraft.papa"
   },
   "navigation": {
     "acceleration": 30,

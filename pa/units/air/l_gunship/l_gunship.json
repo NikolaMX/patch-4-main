@@ -23,7 +23,7 @@
     "fired0": {
       "audio_cue": "/SE/Weapons/air/gunship_fire",
       "effect_scale": 5.0,
-      "effect_spec": "/pa/units/air/gunship/gunship_muzzle_flash.pfx socket_muzzle"
+      "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_muzzle"
     },
     "fired1": {
       "audio_cue": "/SE/Weapons/sea/nuclear_sub_fire"
@@ -31,12 +31,12 @@
   },
   "fx_offsets": [
     {
-      "bone": "engines_back",
-      "filename": "/pa/units/air/gunship/gunship_jets.pfx",
+      "bone": "socket_left_foward_thruster",
+      "filename": "/pa/units/air/l_base_flyer/jet_adv.pfx",
       "offset": [
-        -2.5,
         0,
-        -3.1
+        0,
+        0
       ],
       "orientation": [
         0,
@@ -46,12 +46,12 @@
       "type": "moving"
     },
     {
-      "bone": "engines_back",
-      "filename": "/pa/units/air/gunship/gunship_jets.pfx",
+      "bone": "socket_right_foward_thruster",
+      "filename": "/pa/units/air/l_base_flyer/jet_adv.pfx",
       "offset": [
-        2.5,
         0,
-        -3.1
+        0,
+        0
       ],
       "orientation": [
         0,
@@ -61,12 +61,12 @@
       "type": "moving"
     },
     {
-      "bone": "engines_front",
-      "filename": "/pa/units/air/gunship/gunship_jets.pfx",
+      "bone": "socket_right_rear_thruster01",
+      "filename": "/pa/units/air/l_base_flyer/jet_small_adv.pfx",
       "offset": [
-        -4.6,
         0,
-        -3.3
+        0,
+        0
       ],
       "orientation": [
         0,
@@ -76,12 +76,42 @@
       "type": "moving"
     },
     {
-      "bone": "engines_front",
-      "filename": "/pa/units/air/gunship/gunship_jets.pfx",
+      "bone": "socket_right_rear_thruster02",
+      "filename": "/pa/units/air/l_base_flyer/jet_small_adv.pfx",
       "offset": [
-        4.6,
         0,
-        -3.3
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "bone": "socket_left_rear_thruster01",
+      "filename": "/pa/units/air/l_base_flyer/jet_small_adv.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "bone": "socket_left_rear_thruster02",
+      "filename": "/pa/units/air/l_base_flyer/jet_small_adv.pfx",
+      "offset": [
+        0,
+        0,
+        0
       ],
       "orientation": [
         0,
@@ -100,7 +130,10 @@
   ],
   "model": {
     "animations": {
-      "fly": "/pa/units/air/l_gunship/l_gunship_fly.papa"
+      "fly": "/pa/units/air/l_gunship/l_gunship_anim_fly.papa",
+      "idle": "/pa/units/air/l_gunship/l_gunship_anim_idle.papa",
+      "build": "/pa/units/air/l_gunship/l_gunship_anim_build.papa",
+      "deploy": "/pa/units/air/l_gunship/l_gunship_anim_deploy.papa"
     },
     "animtree": "/pa/anim/anim_trees/l_gunship_anim_tree.json",
     "filename": "/pa/units/air/l_gunship/l_gunship.papa"

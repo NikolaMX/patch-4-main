@@ -28,42 +28,42 @@
   "fx_offsets": [
     {
       "bone": "socket_lines_left",
-      "filename": "/pa/units/air/l_bomber/bomber_lines.pfx",
+      "filename": "/pa/units/air/l_base_flyer/wing_tip_line.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_lines_right",
-      "filename": "/pa/units/air/l_bomber/bomber_lines.pfx",
+      "filename": "/pa/units/air/l_base_flyer/wing_tip_line.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thruster_1",
-      "filename": "/pa/units/air/l_bomber/bomber_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thruster_2",
-      "filename": "/pa/units/air/l_bomber/bomber_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thruster_3",
-      "filename": "/pa/units/air/l_bomber/bomber_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thruster_4",
-      "filename": "/pa/units/air/l_bomber/bomber_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thruster_5",
-      "filename": "/pa/units/air/l_bomber/bomber_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     },
     {
       "bone": "socket_thruster_6",
-      "filename": "/pa/units/air/l_bomber/bomber_jets.pfx",
+      "filename": "/pa/units/air/l_base_flyer/jet_small.pfx",
       "type": "moving_forward"
     }
   ],
@@ -78,7 +78,7 @@
   ],
   "model": {
     "arrows": 5,
-    "filename": "/pa/units/air/l_bomber/nl_bomber.papa"
+    "filename": "/pa/units/air/l_bomber/l_bomber.papa"
   },
   "navigation": {
     "acceleration": 75,

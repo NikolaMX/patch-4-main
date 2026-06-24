@@ -12,7 +12,7 @@
     }
   },
   "base_spec": "/pa/units/land/base_structure/base_structure.json",
-  "build_metal_cost": 2500,
+  "build_metal_cost": 2800,
   "death_weapon": {
     "ground_ammo_spec": "/pa/units/land/l_energy_plant_adv/death_weapon.json"
   },
@@ -90,7 +90,7 @@
     }
   ],
   "headlights": [],
-  "max_health": 2500,
+  "max_health": 2000,
   "mesh_bounds": [
     30,
     30,
@@ -107,7 +107,7 @@
     }
   ],
   "production": {
-    "energy": 6000
+    "energy": 9000
   },
   "recon": {
     "observer": {

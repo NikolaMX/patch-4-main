@@ -1,0 +1,56 @@
+name: Mirror from sunrise5
+
+on:
+  schedule:
+    - cron: '0 * * * *'    # every hour (UTC)
+  workflow_dispatch:         # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-sunrise5
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mirror sunrise5 (preserve our identifier and this workflow)
+        env:
+          TOKEN: ${{ secrets.UPSTREAM_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${TOKEN:-}" ]; then
+            echo "::error::Secret UPSTREAM_TOKEN is not set."; exit 1
+          fi
+
+          # 1) Remember our own mod identifier -- sunrise5's identifier is always ignored.
+          KEEP_ID=$(sed -nE 's/.*"identifier"[[:space:]]*:[[:space:]]*"([^"]*)".*/\1/p' modinfo.json | head -1)
+          echo "Preserving identifier: '$KEEP_ID'"
+
+          # 2) Lay down sunrise5's exact file tree, but keep our .github/ (this workflow).
+          git remote add upstream "https://x-access-token:${TOKEN}@github.com/phyrricvictory/sunrise5.git"
+          git fetch --quiet upstream main
+          git ls-files -z | grep -zv '^\.github/' | xargs -0 -r git rm -q --
+          git checkout upstream/main -- .
+
+          # 3) Force our identifier back into modinfo.json (ignore sunrise5's value).
+          if [ -f modinfo.json ] && [ -n "$KEEP_ID" ]; then
+            sed -i -E "s/(\"identifier\"[[:space:]]*:[[:space:]]*\")[^\"]*(\")/\1${KEEP_ID}\2/" modinfo.json
+          fi
+
+          # 4) Commit + push only when something actually changed.
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Already up to date with sunrise5."
+            exit 0
+          fi
+          git config user.name  "mirror-bot"
+          git config user.email "mirror-bot@users.noreply.github.com"
+          git commit -m "Sync from sunrise5 (identifier kept: ${KEEP_ID})"
+          git push origin HEAD:main

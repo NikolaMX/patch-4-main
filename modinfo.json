@@ -1,8 +1,8 @@
 {
 	"identifier": "sunrise3.3",
-	"display_name": "Legion Balance Testing Sunrise 6.5 + Shields",
-	"description": "Legion Balance Testing Sunrise 6.5 + Shields",
-	"author": "Legion balnce test team",
+	"display_name": "Legion Balance Testing Sunrise 6.7 + Shields",
+	"description": "Legion Balance Testing Sunrise 6.7 + Shields",
+	"author": "Legion balance test team",
 	"signature": "not yet implemented",
 	"forum": "NA",
 	"priority": 2,
@@ -14,7 +14,7 @@
 		"expansion"
 	],
 	"context": "server",
-	"date": "2026-06-15",
-	"build": "124651",
-	"version": "0.3"
+	"date": "2026-07-03",
+	"build": "124663",
+	"version": "0.6"
 }

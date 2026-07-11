@@ -7,7 +7,7 @@
   "firing_standard_deviation": 8,
   "idle_aim_delay": 1,
   "max_range": 50,
-  "rate_of_fire": 1,
+  "rate_of_fire": 0.5,
   "spread_fire": false,
   "target_layers": ["WL_LandHorizontal", "WL_Seafloor", "WL_WaterSurface"],
   "target_priorities": ["Mobile - Air", "Mobile", "Structure - Wall"],

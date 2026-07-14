@@ -44,7 +44,7 @@
       "ignores_gravity": false,
       "apply_thrust": false,
       "ignores_LOS": true,
-      "stage_duration": 150,
+      "stage_change_height": 20,
       "stage_turn_rate": 0,
       "rotates_to_velocity": true
     },

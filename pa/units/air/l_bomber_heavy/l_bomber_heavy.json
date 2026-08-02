@@ -24,7 +24,7 @@
     "brake": 20,
     "dodge_multiplier": 0.0,
     "dodge_radius": 0,
-    "move_speed": 40,
+    "move_speed": 60,
     "turn_speed": 120,
     "wobble_factor": 0.05,
     "wobble_speed": 0.1

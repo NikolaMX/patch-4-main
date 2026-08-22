@@ -203,6 +203,10 @@
     "/pa/units/sea/drone_carrier/drone/drone.json",
     "/pa/units/sea/fabrication_barge/fabrication_barge.json",
     "/pa/units/sea/hover_ship/hover_ship.json",
+    "/pa/units/land/radar_jammer/radar_jammer.json",
+    "/pa/units/land/tank_jammer/tank_jammer.json",
+    "/pa/units/orbital/orbital_mine/orbital_mine.json",
+    "/pa/units/land/tank_anti_nuke/tank_anti_nuke.json",
     "/pa/units/air/l_air_bomb/l_air_bomb.json",
     "/pa/units/air/l_air_bomb/triggered/l_air_bomb.json",
     "/pa/units/air/l_air_carrier/l_air_carrier.json",
@@ -327,6 +331,5 @@
     "/pa/units/land/l_tank_adv_support/l_tank_adv_support.json",
     "/pa/units/land/l_turret_reclaim/l_turret_reclaim.json",
     "/pa/units/land/l_attack_vehicle/l_attack_vehicle.json"
-    
   ]
 }

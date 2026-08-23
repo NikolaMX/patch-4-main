@@ -34,8 +34,8 @@
   "events": {
     "died": {
       "audio_cue": "/SE/Weapons/bot/spark_fire",
-      "effect_scale": 1,
-      "effect_spec": "/pa/effects/specs/none.pfx"
+      "effect_scale": 2,
+      "effect_spec": "/pa/units/air/l_air_bomb/exp_blue.pfx"
     },
     "fired": {
       "audio_cue": "/SE/Weapons/bot/sniper_fire_anti_tac",

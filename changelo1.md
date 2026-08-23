@@ -1,117 +1,500 @@
-# Sunrise — Full Unit Diff vs. Legion Expansion
+# Sunrise — Unit Diff vs. Legion Expansion
 
-Every entry below is a difference between the stock **Legion Expansion** unit JSONs and the **Sunrise** (`patch-4-main`) overrides. Only files under `pa/units/` were compared; models, effects, sounds, icons and bone/socket rewiring are summarised at the bottom rather than listed value-by-value.
+## Air
+
+**Nova**
+- `build_metal_cost` increased from 180 to 200
+- `max_health` decreased from 180 to 150
+- `guard_radius` increased from 0 to 160
+- `spawn_unit_on_death_with_velocity` changed from false to true
+- `max_range` increased from 10 to 50 (main and deploy weapons)
+- `no_busy_auto_attack` changed from true to false
+
+**AOE Nova** (triggered bomb)
+- `max_health` decreased from 500 to 220
+- `navigation`/`move_speed` increased from 0 to 130
+- `guard_radius` added, set to 160
+- `nearby_target_tick_update_interval` added, set to 1
+- `wreckage_health_frac` added, set to 0.0
+- `max_range` decreased from 80 to 5
+- `yaw_range` increased from 0 to 360
+- `pitch_range` increased from 0 to 360
+- `self_destruct` added, set to true
+- `target_priorities` added: `Mobile & Air`
+- Ammo `damage` decreased from 6 to 0
+- Ammo `splash_damage` decreased from 6 to 0
+- Ammo `splash_radius` decreased from 80 to 0
+- Ammo `full_splash_damage_radius` decreased from 80 to 0
+- Death `damage` increased from 35 to 150
+- Death `splash_damage` added, set to 150
+- Death `splash_radius` decreased from 70 to 15
+- Death `full_splash_damage_radius` increased from 0 to 5
+- Death `damage_volume`/`initial_radius` increased from 5.0 to 20.0
+- Death `damage_volume`/`delay` decreased from 1 to 0.01
+- Death weapon `ammo_capacity` and `ammo_per_shot` decreased from 20 to 15
+
+**Meteor**
+- `max_health` decreased from 2000 to 750
+- `navigation`/`aggressive_behavior` added, set to `circle`
+- `navigation`/`aggressive_distance` added, set to 230
+- `navigation`/`circle_min_time` added, set to 10.0
+- `navigation`/`circle_max_time` added, set to 20.0
+- `navigation`/`bank_factor` added, set to 2
+
+**Meteoroid** (Meteor drone)
+- `navigation`/`move_speed` decreased from 80 to 40
+- `navigation`/`turn_speed` decreased from 240 to 120
+- `target_layers` removed `WL_Air`
+
+**Scythe**
+- `build_metal_cost` decreased from 240 to 200
+- `navigation`/`turn_speed` decreased from 300 to 240
+- Ammo `damage` increased from 29 to 35
+- `base_spec` changed from `base_shell_turret` to `base_fighter_turret`
+- `max_range` decreased from 110 to 107.5
+- `firing_arc_yaw` decreased from 70 to 60
+- `yaw_range` decreased from 70 to 0
+- `pitch_rate` increased from 360 to 3600
+
+**Dauntless**
+- `navigation`/`move_speed` increased from 75 to 80
+- `navigation`/`acceleration` increased from 75 to 80
+- `navigation`/`brake` increased from 20 to 25
+- Ammo `initial_velocity` and `max_velocity` decreased from 40.0 to 25.0
+- Ammo `full_damage_splash_radius` decreased from 2 to 1
+- `ammo_capacity` decreased from 425 to 424
+
+**Firebird**
+- Rocket `max_range` decreased from 180 to 160
+- Rocket `rate_of_fire` decreased from 0.33 to 0.25
+- `projectiles_per_fire` added, set to 1 per gun
+- Rocket muzzles reduced from 4 to 2
+
+**Lockheed**
+- `maintain_priority_target` added, set to false
+- Rockets moved to the primary tool slot, gun to secondary
+- Gun `max_range` decreased from 80 to 60
+- Gun `rate_of_fire` decreased from 4 to 2
+- Rocket `damage` decreased from 250 to 85
+- Rocket `splash_damage` added, set to 85
+- Rocket `splash_radius` added, set to 5
+- Rocket `full_damage_splash_radius` increased from 2 to 3
+- Rocket `turn_rate` added, set to 0
+- Rocket `ammo_capacity` increased from 5 to 10
+- Rocket `ammo_per_shot` increased from 2.5 to 3
+- Rocket `rate_of_fire` increased from 2.5 to 5
+- Rocket `max_range` decreased from 100 to 60
+- Rocket `firing_standard_deviation` decreased from 30 to 5
+- Rocket `firing_arc_yaw` and `firing_arc_pitch` decreased from 180 to 0
+- Rocket `yaw_range` and `pitch_range` increased from 0 to 180
+
+**Marauder**
+- `max_health` decreased from 50 to 40
+- `navigation`/`move_speed` decreased from 100 to 90
+- `maintain_priority_target` added, set to false
+- `ammo_capacity` added, set to 6
+- `ammo_per_shot` added, set to 1
+- `ammo_demand` added, set to 1
+- `ammo_source` added, set to `time`
+- `target_priorities` added: `Fabber`, `AirDefense`, `Mobile & (Land | Naval)`
+
+**Osprey**
+- `build_metal_cost` increased from 100 to 165
+- `max_health` decreased from 55 to 50
+- `navigation`/`move_speed` decreased from 100 to 85
+- `navigation`/`brake` increased from 40 to 80
+- `recon`/`observer` radius increased from 70 to 120
+- `transporter`/`load_range` added, set to 15
+- `unit_types` added `UNITTYPE_Offense`
+
+**Comet**
+- `unit_types` changed `UNITTYPE_FabAdvBuild` to `UNITTYPE_FactoryBuild`
+- `command_caps` removed `ORDER_SpecialMove`
+- `wreckage_health_frac` added, set to 0.5
+
+**Infiltrator**
+- `unit_types` added `UNITTYPE_Offense`
+
+**Fabrication Flyer**
+- `max_health` decreased from 165 to 85
+
+**Salamander**
+- `base_spec` moved to the rebuilt `l_bomber_heavy` chassis
+- `navigation`/`move_speed` increased from 40 to 60
+
+**Purifier** (Salamander drop turret)
+- `base_spec` moved to the rebuilt `l_bomber_heavy` chassis
+- `mesh_bounds` decreased from 10/10/8 to 3.5/3.5/5
+- `command_caps` added `ORDER_FireSecondaryWeapon`
+- Muzzles reduced from 2 to 1
+
+**Loki**
+- All four tools changed to a single new `tripod_tool_weapon`
+- `damage` decreased from 800 to 100
+- `splash_damage` decreased from 300 to 50
+- `splash_radius` decreased from 40 to 3
+- `full_damage_splash_radius` decreased from 5 to 1
+- `max_range` decreased from 150 to 140
+- `rate_of_fire` increased from 0.5 to 10
+- `ammo_capacity` added, set to 10.1
+- `ammo_per_shot` added, set to 0.2
+- `ammo_demand` added, set to 1
+- `ammo_source` added, set to `time`
+- `carpet_fire` and `carpet_wait_for_full_ammo` added, set to true
+- `spread_fire` changed from false to true
+- `pitch_range` decreased from 60 to 45
+- `pitch_rate` increased from 20 to 180
+- `yaw_rate` increased from 40 to 45
+- `idle_aim_delay` increased from 2 to 5
+- `initial_velocity` and `max_velocity` set to 700.0
+- `target_layers` removed `WL_Air` and `WL_Underwater`
+- Side gun `splash_radius` decreased from 25 to 5
+- Side gun `full_damage_splash_radius` decreased from 20 to 5
 
 ---
 
-## 🏗️ Economy & Factories
-*   **Foundry build rates (all tiers cheaper):**
-    *   **Walker / Armour Foundry:** Metal 17 -> **15**; Energy 765 -> **675**.
-    *   **Advanced Walker / Armour / Flyer Foundry:** Metal 50 -> **45**; Energy 1650 -> **1500**.
-    *   **Advanced Ship Foundry:** Metal 65 -> **60**; Energy 1900 -> **1750**.
-*   **Power Catalyst:** Energy production 600 -> **700**.
-*   **Advanced Power Catalyst:** Cost 2500 -> **2800**. Health 2500 -> **2000**. Energy production 6000 -> **9000**. Larger footprint (25 -> 30).
-*   **OmniSilo Storage Device:** Health 5000 -> **7500**. Energy storage 225,000 -> **75,000**. Death explosion 1200 -> **500** damage. Footprint shrunk 28 -> 20.
-*   **Mass Extractor:** No longer lists the Bug advanced extractor as a replaceable unit.
+## Land
+
+**Predator** (new)
+- `build_metal_cost` 100
+- `max_health` 100
+- `navigation`/`move_speed` 15, `acceleration` and `brake` 150, `turn_speed` 180
+- `recon`/`observer` radius 130
+- `unit_types` includes `UNITTYPE_CannonBuildable`
+
+**Lancer**
+- `build_metal_cost` decreased from 150 to 125
+- `max_health` decreased from 100 to 70
+- Ammo `damage` increased from 166 to 225
+- `max_range` increased from 70 to 80
+- `rate_of_fire` decreased from 0.61 to 0.4
+
+**Peacekeeper**
+- `max_health` decreased from 170 to 60
+- `shield` added: `max_health` 35, `radius` 1, `energy_demand` 15, `recharge_rate` 2.5, `cooldown_time` 10, `recharge_requires_efficiency` true
+- `energy_efficiency_requirement` added, set to 0.9
+- `navigation`/`type` changed from `amphibious` to `land-small`
+- `recon`/`observer` radius increased from 105 to 115
+- `max_range` decreased from 70 to 67.5
+- `unit_types` added `UNITTYPE_Shield`
+
+**Stoke**
+- `build_metal_cost` decreased from 210 to 170
+- `navigation`/`move_speed` increased from 14 to 16
+- Ammo `damage` increased from 39 to 50
+- `max_range` increased from 80 to 100
+- `pitch_rate` increased from 120 to 360
+- `yaw_rate` increased from 160 to 360
+- `target_layers` changed from `WL_LandHorizontal`/`WL_Seafloor`/`WL_WaterSurface` to `WL_Air`
+- `target_priorities` added: `Air & ( EnergyProduction | Transport | Bomber | Gunship | Titan )`, `Mobile & Air`
+- Ammo `flight_type` added, set to `Staged` (3 stages, `cruise_height` 20)
+- Ammo `initial_velocity` and `max_velocity` increased from 200.0 to 250.0
+- Ammo `lifetime` increased from 1 to 15
+- Ammo `turn_rate` added, set to 30
+- Ammo `physics`/`ignore_gravity` added, set to true
+
+**Patriot**
+- `navigation`/`acceleration` and `brake` decreased from 120 to 30
+- `navigation`/`turn_speed` decreased from 720 to 360
+- `projectiles_per_fire` added, set to 4
+- Ammo `base_spec` changed from `base_missile_aa_seeking` to `base_laser_blast`
+- Ammo `damage` decreased from 25 to 7.5
+- Ammo `splash_damage` added, set to 7.5
+- Ammo `splash_radius` added, set to 1
+- Ammo `initial_velocity` and `max_velocity` increased from 200.0 to 280
+- Ammo `lifetime` decreased from 1.0 to 0.5
+- Ammo `turn_rate` removed (was 3600.0)
+- `firing_standard_deviation` added, set to 3
+- `firing_move_speed_multiplier` added, set to 0.5
+- `targeting_move_speed_multiplier` added, set to 0.5
+- `targeting_disable_pushing` added, set to true
+
+**Orbweaver**
+- `max_health` increased from 400 to 480
+
+**Enforcer**
+- `navigation`/`move_speed` increased from 12 to 15
+- `max_range` decreased from 100 to 95
+
+**Maul**
+- `build_metal_cost` decreased from 300 to 170
+- `max_health` decreased from 1150 to 600
+- `rate_of_fire` decreased from 1 to 0.5
+
+**Shank**
+- Ammo `damage` increased from 125 to 130
+- Ammo `splash_damage` increased from 20 to 60
+- Ammo `splash_radius` decreased from 5 to 3
+- Ammo `physics`/`type` added, set to `Projectile`
+- Ammo `physics`/`gravity_scalar` added, set to 5
+- Ammo `physics`/`allow_underground` added, set to true
+
+**Corsair**
+- `build_metal_cost` decreased from 300 to 220
+- `max_health` decreased from 175 to 100
+- `rate_of_fire` increased from 0.25 to 0.3
+- `default_firing_pitch` added, set to -65
+- Ammo `flight_type` added, set to `Staged` (3 stages, `cruise_height` 60)
+- Ammo `initial_velocity` decreased from 200 to 120
+- Ammo `max_velocity` decreased from 400 to 50
+- Ammo `physics`/`gravity_scalar` increased from 6 to 10
+- Ammo `splash_damage` decreased from 40 to 30
+- Ammo `splash_radius` decreased from 10 to 8
+- `target_priorities` added: `Structure & SurfaceDefense`, `Structure & Defense`, `Commander`
+
+**Panzer**
+- `target_layers` changed from `WL_LandHorizontal`/`WL_WaterSurface`/`WL_Orbital` to `WL_Air`/`WL_Orbital`
+- `target_priorities` added: `Structure & SurfaceDefense`, `Structure & Defense`, `Commander`, `Mobile - Air`, `Structure - Wall`, `Wall`
+
+**Miniman**
+- `ammo_capacity` increased from 7 to 8
+- Bomb `armor_damage_map`/`AT_Structure` decreased from 3.0 to 1.0
+
+**Purger**
+- `build_metal_cost` increased from 50 to 60
+- `attack_range_frac` added, set to 0.8
+- `maintain_priority_target` added, set to false
+- `mesh_bounds` increased from 3.5/3/2.8 to 3.75/3.5/5
+- Ammo `base_spec` changed from `base_artillery` to `base_missile_aa_seeking`
+- Ammo `damage` decreased from 450 to 334
+- Ammo `initial_velocity` increased from 80 to 150
+- Ammo `lifetime` decreased from 30 to 1
+- Ammo `turn_rate` added, set to 60.0
+- Ammo `armor_damage_map`/`AT_Structure` added, set to 1.0
+- `ammo_capacity` added, set to 1
+- `ammo_per_shot` added, set to 1
+- `ammo_demand` added, set to 10
+- `ammo_source` added, set to `energy`
+- Jump tool `auto_attack` changed from false to true
+- `no_busy_auto_attack` changed from true to false
+
+**Monstrosity**
+- `navigation`/`move_speed` increased from 12 to 15
+- `navigation`/`acceleration` increased from 10 to 15
+- `recon`/`observer` radius increased from 100 to 150
+- `max_range` decreased from 170 to 140
+- `target_priorities` added: `Advanced - Structure`, `Tank - Structure`, `Mobile - Air`, `Structure - Wall`, `Wall`
+
+**Deathmark**
+- `build_metal_cost` decreased from 1200 to 1000
+- `maintain_priority_target` added, set to false
+- Ammo `damage` decreased from 1000 to 500
+- Ammo `initial_velocity` decreased from 200 to 100
+- Ammo `max_velocity` decreased from 500 to 300
+- Ammo `physics`/`gravity_scalar` decreased from 26 to 20
+- `rate_of_fire` increased from 0.142 to 10
+- `ammo_capacity` added, set to 7
+- `ammo_per_shot` added, set to 7
+- `ammo_demand` added, set to 1
+- `ammo_source` added, set to `time`
+- `carpet_fire` and `carpet_wait_for_full_ammo` added, set to true
+- `target_priorities` added: `Advanced - Structure`, `Tank - Structure`, `Mobile - Air`, `Structure - Wall`, `Wall`
+
+**Havoc**
+- Ammo `damage` decreased from 750 to 500
+- `ammo_chain_damage` added, set to 500.0
+- `ammo_chain_jumps` added, set to 2
+- `ammo_chain_range` added, set to 50.0
+- `ammo_chain_damage_falloff` added, set to 1
+- `ammo_chain_travel` added, set to true
+- Ammo `initial_velocity` decreased from 200.0 to 100.0
+- Ammo `max_velocity` decreased from 300.0 to 150.0
+- `spawn_unit_on_death` removed (mine chain)
+- Second tool (missile intercept beam) removed
+
+**Earthshaker**
+- `build_metal_cost` decreased from 1800 to 1400
+- `max_health` decreased from 7000 to 2000
+- `navigation`/`turn_speed` decreased from 180 to 60
+- Weapon tool removed
+- `shield` added: `max_health` 5000, `radius` 75, `energy_demand` 2000, `recharge_rate` 300, `cooldown_time` 10, `recharge_requires_efficiency` true
+- `energy_efficiency_requirement` added, set to 0.9
+- `unit_types` added `UNITTYPE_Shield`
+
+**Scorpion**
+- `build_metal_cost` increased from 900 to 1100
+- `max_health` increased from 1650 to 2000
+- Ammo `damage` increased from 500 to 750
+- Ammo `splash_damage` increased from 150 to 250
+- Ammo `splash_radius` decreased from 15 to 5
+- `rate_of_fire` increased from 0.4 to 0.6
+
+**Necromancer**
+- `projectiles_per_fire` increased from 7 to 14
+- `ammo_capacity` and `ammo_per_shot` increased from 420 to 750
+- `ammo_demand` increased from 35 to 45
+- `transportable`/`size` added, set to 1
+
+**Investigator**
+- `build_metal_cost` decreased from 150 to 100
+- `recon`/`observer` radius increased from 150 to 200
+- Radar mode `recon`/`observer` radius increased from 0 to 75
+- Radar mode `consumption`/`energy` increased from 100 to 200
 
 ---
 
-## 🔨 Fabricators
-*   **Fabrication Walker (Bot Fab):** Health 65 -> **30**; gains a **30 HP personal shield** (30 e/s, 1.5 recharge, 10 s cooldown). Speed 14 -> **15**. Description now "Shielded Builder".
-*   **Advanced Fabrication Walker:** Cost 2000 -> **1900**. Health 150 -> **400**. Speed 14 -> **10**. Build energy 2200 -> **1900**. Now has death effects.
-*   **Armour Fabricator (Vehicle Fab):** Cost 200 -> **250**. Health 185 -> **200**. Speed 11 -> **10**. Build arm 13 metal / 850 energy -> **16 / 1100**.
-*   **Advanced Armour Fabricator:** Health 500 -> **200**. Speed 10 -> **16**. Build metal 70 -> **60**.
-*   **Guardian (Combat Fab):** Cost 350 -> **250**. Build arm 45 metal / 600 energy -> **30 / 400**.
-*   **Fabrication Flyer:** Health 165 -> **85**. Smaller mesh bounds.
+## Structures
+
+**Jackal**
+- `build_metal_cost` decreased from 325 to 275
+- `max_health` increased from 750 to 1000
+
+**Scarab**
+- `build_metal_cost` decreased from 550 to 450
+- `max_health` increased from 2500 to 3000
+- `max_range` increased from 110 to 120
+- `mesh_bounds` decreased from 17.06/17.06/16.78 to 13.4/17.41/10.89
+
+**Rampart**
+- `max_health` increased from 750 to 1500
+- `shield` added: `max_health` 15000, `radius` 100, `energy_demand` 6000, `recharge_rate` 200, `cooldown_time` 30, `recharge_requires_efficiency` true
+- `ammo_capacity` increased from 36000 to 60000
+- `ammo_demand` increased from 1000 to 1200
+- `mesh_bounds` decreased from 30/30/27 to 15/15/13.5
+- `placement_size` decreased from 30/30 to 15/15
+- `wreckage_health_frac` added, set to 0.4
+- Long-range interceptor tool removed
+
+**Shredder**
+- `unit_types` added `UNITTYPE_CombatFabBuild`
+
+**Radar**
+- `max_health` increased from 500 to 750
+- `recon`/`observer` radius increased from 100 to 200
+- `mesh_bounds` decreased from 13.85 to 6.694
+
+**Hive**
+- `l_swarm_hive_reclaim_arm` tool added: `auto_reclaim` true, `auto_repair` false, `construction_demand`/`metal` 60, `max_range` 180
+- Main weapon `auto_reclaim` added, set to true
+
+**Reclaim Turret** (new)
+- `auto_reclaim` true, `auto_repair` false
+- `construction_demand`/`metal` 30, `construction_demand`/`energy` 400
+- `max_range` 200
+- `reclaim_types` limited to `Wreckage` and `Feature`
+
+**Liberator** (new registration)
+- Added to `unit_list.json` and `unit_list_legion.json` (spec unchanged from Legion)
+
+**Barricade**
+- `display_name` changed from Clot to Barricade
+- `area_build_separation` increased from 1 to 1.2
+
+**Power Catalyst**
+- `production`/`energy` increased from 600 to 700
+- `death_weapon` added, 500 damge over 20 radius with 2.5s delay
+
+**Advanced Power Catalyst**
+- `build_metal_cost` increased from 2500 to 2800
+- `max_health` decreased from 2500 to 2000
+- `production`/`energy` increased from 6000 to 9000
+- `mesh_bounds` increased from 25/25 to 30/30
+
+**OmniSilo Storage Device**
+- `max_health` increased from 5000 to 7500
+- `storage`/`energy` decreased from 225000 to 75000
+- Death weapon `damage` and `splash_damage` decreased from 1200 to 500
+- `mesh_bounds` decreased from 28/28/25 to 20/20/14.2
+
+**Mass Extractor**
+- `replaceable_units` removed `bug_advanced_extractor`
+
+**Walker Foundry / Armour Foundry**
+- `construction_demand`/`metal` decreased from 17 to 15
+- `construction_demand`/`energy` decreased from 765 to 675
+
+**Advanced Walker / Armour / Flyer Foundry**
+- `construction_demand`/`metal` decreased from 50 to 45
+- `construction_demand`/`energy` decreased from 1650 to 1500
+
+**Advanced Ship Foundry**
+- `construction_demand`/`metal` decreased from 65 to 60
+- `construction_demand`/`energy` decreased from 1900 to 1750
 
 ---
 
-## 🛡️ Defense & Structures
-*   **Liberator (NEW turret):** Legion's unused scout turret is now registered and buildable — cheap perimeter defense with long sight.
-*   **Reclaim Turret (NEW):** Automated wreckage clearing — reclaim-only build arm (30 metal / 400 energy, 200 range), no repair, restricted to `Wreckage` and `Feature`.
-*   **Jackal:** Cost 325 -> **275**. Health 750 -> **1000**.
-*   **Scarab:** Cost 550 -> **450**. Health 2500 -> **3000**. Range 110 -> **120**. Smaller footprint.
-*   **Rampart (Shield Generator):** Health 750 -> **1500**. Now uses a real **shield component**: 15,000 shield HP, 100 radius, 6000 e/s demand, 200 recharge, 30 s cooldown, requires efficiency. The old long-range interceptor tool was removed; the anti-projectile pool was raised 36k -> **60k** ammo with 1000 -> **1200** demand. Footprint halved 30 -> **15**. Leaves 40% wreckage.
-*   **Shredder (AA Turret):** Now carries `UNITTYPE_CombatFabBuild` — buildable by the Guardian.
-*   **Radar:** Health 500 -> **750**. Vision/radar radius 100 -> **200**. Much smaller footprint.
-*   **Hive:** Gains a dedicated **reclaim arm** (auto-reclaim, 60 metal/s, 180 range, assist-restricted) on a rear turret bone, and its main weapon now auto-reclaims.
-*   **Barricade:** Legion's **Clot** renamed to **Barricade**. Area-build separation 1 -> **1.2**.
+## Fabricators
+
+**Fabrication Walker**
+- `max_health` decreased from 65 to 30
+- `navigation`/`move_speed` increased from 14 to 15
+- `shield` added: `max_health` 30, `radius` 1, `energy_demand` 30, `recharge_rate` 1.5, `cooldown_time` 10
+
+**Advanced Fabrication Walker**
+- `build_metal_cost` decreased from 2000 to 1900
+- `max_health` increased from 150 to 400
+- `navigation`/`move_speed` decreased from 14 to 10
+- `construction_demand`/`energy` decreased from 2200 to 1900
+- `has_death_effects` added, set to true
+
+**Armour Fabricator**
+- `build_metal_cost` increased from 200 to 250
+- `max_health` increased from 185 to 200
+- `navigation`/`move_speed` decreased from 11 to 10
+- `construction_demand`/`metal` increased from 13 to 16
+- `construction_demand`/`energy` increased from 850 to 1100
+
+**Advanced Armour Fabricator**
+- `max_health` decreased from 500 to 200
+- `navigation`/`move_speed` increased from 10 to 16
+- `construction_demand`/`metal` decreased from 70 to 60
+
+**Guardian**
+- `build_metal_cost` decreased from 350 to 250
+- `construction_demand`/`metal` decreased from 45 to 30
+- `construction_demand`/`energy` decreased from 600 to 400
 
 ---
 
-## 🚜 Land Units
+## Sea
 
-### Combat
-*   **Predator (NEW T1 Vehicle):** 100 metal | 100 HP | speed 15 | 150 accel/brake | 180 turn | 130 vision | `CannonBuildable`.
-*   **Lancer:** Cost 150 -> **125**. Health 100 -> **70**. Damage 166 -> **225**. Range 70 -> **80**. Rate of fire 0.61 -> **0.4**.
-*   **Peacekeeper:** Health 170 -> **60**, plus a **35 HP personal shield** (15 e/s, 2.5 recharge, 10 s cooldown). Movement `amphibious` -> **`land-small`**. Range 70 -> **67.5**. Vision 105 -> **115**. Now flagged `UNITTYPE_Shield`; requires 90% energy efficiency.
-*   **Stoke (Rework -> Anti-Air):** Description now "Anti-Air Tank — armed with a single flak cannon". Cost 210 -> **170**. Speed 14 -> **16**. Damage 39 -> **50**. Range 80 -> **100**. Targets **air only** (land/sea/seabed layers removed). Turret pitch rate 120 -> **360**, yaw rate 160 -> **360**. The shell is now a staged, gravity-free flak round (velocity 200 -> **250**, 15 s lifetime, 20 cruise height) that prioritises transports, bombers, gunships, titans and airborne energy producers.
-*   **Patriot (Rework):** Homing missiles replaced with a **4-round laser burst** — per-shot damage 25 -> **7.5** (x4) with 1-radius splash, velocity 200 -> **280**, lifetime halved. Acceleration/brake 120 -> **30**, turn speed 720 -> **360**. Slows to 50% speed while targeting and firing, and stops pushing allies. 3° spread.
-*   **Orbweaver (Advanced AA Walker):** Health 400 -> **480**.
-*   **Enforcer:** Speed 12 -> **15**. Range 100 -> **95**.
-*   **Maul:** Cost 300 -> **170**. Health 1150 -> **600**. Rate of fire 1 -> **0.5**.
-*   **Shank:** Damage 125 -> **130**. Splash damage 20 -> **60**, splash radius 5 -> **3**. Shell is now a proper projectile (gravity 5, may pass underground).
-*   **Corsair:** Cost 300 -> **220**. Health 175 -> **100**. Rate of fire 0.25 -> **0.3**. Shell reworked into a **staged lofted missile** (cruise height 60, thrust plus terminal homing, 70/50 stage turn rates), initial velocity 200 -> **120**, max 400 -> **50**, gravity 6 -> **10**. Splash 40 -> **30**, radius 10 -> **8**. Now prioritises surface defenses, defensive structures and commanders. Default firing pitch -65°.
-*   **Panzer:** Weapon now targets **Air and Orbital only** (Land and Water Surface removed) and takes the same defense/commander priority list.
-*   **Miniman:** Ammo capacity 7 -> **8**. Its bombs lose their structure bonus — `AT_Structure` multiplier 3.0 -> **1.0**.
-*   **Purger:** Cost 50 -> **60**. Attack range fraction **0.8**; no longer maintains a priority target. Bomb rebuilt on the seeking-missile base — damage 450 -> **334**, initial velocity 80 -> **150**, lifetime 30 -> **1**, 60 turn rate (it now tracks), no structure bonus. The weapon draws **10 energy per shot**; the jump tool auto-attacks and no longer blocks while busy.
-*   **Monstrosity:** Speed 12 -> **15** (acceleration 10 -> 15). Vision 100 -> **150**. Range 170 -> **140**. Now prioritises advanced units, tanks and structures over walls.
-*   **Deathmark:** Cost 1200 -> **1000**. Per-shot damage 1000 -> **500**; shell velocity 200/500 -> **100/300**, gravity 26 -> **20**. Weapon converted to a **carpet-fire burst** — rate of fire 0.142 -> **10**, fed by a 7-round, time-refilled magazine that waits for a full load. Prioritises advanced units, tanks and structures; no longer maintains a priority target.
-*   **Havoc (Rework):** Timed electric mines replaced with **chain lightning** — the bolt jumps up to **2** extra targets within **50** range for **500** damage each, with no falloff. Direct damage 750 -> **500**; projectile speed 200/300 -> **100/150**. The old secondary beam / missile-intercept tool was removed.
-*   **Earthshaker (Rework -> Bubble Shield):** Weapon removed entirely; it is now a mobile **shield generator** — 5000 shield HP, 75 radius, 2000 e/s, 300 recharge, 10 s cooldown, 90% efficiency required. Cost 1800 -> **1400**. Health 7000 -> **2000**. Turn speed 180 -> **60**. Flagged `UNITTYPE_Shield`.
-*   **Scorpion:** Cost 900 -> **1100**. Health 1650 -> **2000**. Damage 500 -> **750**. Splash damage 150 -> **250**, splash radius 15 -> **5**. Rate of fire 0.4 -> **0.6**.
-*   **Necromancer:** Projectiles per fire 7 -> **14** (seven new drop bones). Ammo capacity / cost per shot 420 -> **750**, demand 35 -> **45**. Now transportable (size 1).
-*   **Investigator (Scout):** Cost 150 -> **100**. Vision 150 -> **200**. **Radar mode fixed** — radar radius 0 -> **75**, energy draw 100 -> **200**.
+**Talos**
+- AA ammo `base_spec` changed from `base_beam` to `base_laser_blast`
+- AA ammo `damage` decreased from 20 to 10
+- AA ammo `splash_damage` increased from 0 to 10
+- AA ammo `splash_radius` increased from 0 to 1
+- AA ammo `initial_velocity` and `max_velocity` added, set to 280
+- AA ammo `lifetime` added, set to 0.7
+- AA `base_spec` changed from `base_shell_turret` to `base_bot_weapon`
+- AA `max_range` decreased from 180 to 110
+- AA `rate_of_fire` increased from 1 to 2
+- AA `yaw_range` increased from 180 to 360
+- AA `pitch_range` decreased from 180 to 90
+- AA `firing_standard_deviation` added, set to 3
+- AA `idle_aim_delay` added, set to 0
+- AA `spread_fire` added, set to true
+- AA `target_layers` added `WL_AnySurface`
 
 ---
 
-## ✈️ Air Units
-*   **Nova (Rework):** Cost 180 -> **200**. Health 180 -> **150**. Guard radius 0 -> **160**. Trigger range 10 -> **50**, and it will now engage while busy. Spawns its bomb with inherited velocity.
-    *   **AOE Nova (the triggered bomb):** Health 500 -> **220**, and it now **flies at speed 130** to chase its target (it was stationary), with a 1-tick target refresh and 160 guard radius. Its weapon becomes a **self-destruct** with full 360° arcs, range 80 -> **5**, prioritising mobile air. The lingering pulse ammo is zeroed out (6 damage / 80 splash -> **0**) and the death blast carries the payload instead: damage 35 -> **150** with **150 splash** over 15 radius (was 6 over 70), damage volume 5 -> **20** radius firing almost instantly (1 s -> 0.01 s delay). Death weapon ammo 20 -> **15**. Leaves no wreckage.
-*   **Meteor:** Health 2000 -> **750**. Now circles engaged targets (`circle` behaviour, 230 aggressive distance, 10–20 s circle time, bank factor 2).
-    *   **Meteoroid drones:** Speed 80 -> **40**, turn 240 -> **120**, and they can **no longer target air**.
-*   **Scythe:** Cost 240 -> **200**. Damage 29 -> **35**. Turn speed 300 -> **240**. Rebuilt on the fighter-turret base: **forward-fixed guns** (yaw range 70 -> **0**), firing arc 70 -> **60**, pitch rate 360 -> **3600**, range 110 -> **107.5**.
-*   **Dauntless:** Speed 75 -> **80** (acceleration 75 -> 80, brake 20 -> 25). Bomb velocity 40 -> **25**, full-damage splash radius 2 -> **1**. Ammo capacity 425 -> **424** (one bomb per pass).
-*   **Firebird:** Rocket range 180 -> **160**, rate of fire 0.33 -> **0.25**.
-*   **Lockheed (Rework):** The **rockets** are now the primary weapon and the gun is secondary — gun range 80 -> **60**, rate of fire 4 -> **2**. Rockets: damage 250 -> **85** but they gain **85 splash over 5 radius**, ammo capacity 5 -> **10**, ammo per shot 2.5 -> **3**, rate of fire 2.5 -> **5**, range 100 -> **60**, spread 30 -> **5**, fired from a single bone with full 180° traverse instead of a six-tube salvo, and they no longer turn in flight. No longer maintains a priority target.
-*   **Marauder:** Health 50 -> **40**. Speed 100 -> **90**. Weapon now runs on a **6-round, time-refilled magazine** (1/s regen), so sustained fire falls off. Prioritises fabbers, then anti-air, then land and naval mobiles. No longer maintains a priority target. Fires from a single muzzle.
-*   **Osprey (Transport):** Cost 100 -> **165**. Health 55 -> **50**. Speed 100 -> **85**, brake 40 -> **80**. Vision 70 -> **120**. Explicit 15 load range. Re-tagged `UNITTYPE_Offense`.
-*   **Comet:** `UNITTYPE_FabAdvBuild` -> **`UNITTYPE_FactoryBuild`** — no longer buildable by fabbers. Lost `ORDER_SpecialMove`. Leaves 50% wreckage.
-*   **Infiltrator:** Re-tagged with `UNITTYPE_Offense`.
-*   **Salamander:** Spec moved onto a rebuilt `l_bomber_heavy` chassis (new model and assets). Speed 40 -> **60**.
-    *   **Purifier (dropped flame turret):** Rebased onto the new chassis, footprint shrunk 10x10x8 -> **3.5x3.5x5**, single muzzle, and it now accepts `ORDER_FireSecondaryWeapon`.
-*   **Loki (Titan, Rework):** All four turrets now share one **tripod laser** weapon instead of the split main and side cannons.
-    *   New weapon: **100 damage plus 50 splash over 3 radius** per bolt, 700 velocity, 10 shots/sec carpet fire from a 10.1 ammo pool (0.2 per shot, 1/s refill — roughly a 50-shot burst then a reload), range **140** (was 150), 45° pitch / 180° yaw, 5 s idle aim delay, spread fire.
-    *   Targets **land, seabed and water surface only** — Air and Underwater dropped from the old main cannon.
-    *   Priorities: advanced mobiles, then commanders, then non-air mobiles, then structures, then walls.
-    *   Old side-gun splash tightened: full-damage radius 20 -> **5**, splash radius 25 -> **5**.
+## Orbital
+
+**Viper**
+- Ammo `damage` increased from 40 to 50
+- `max_range` decreased from 200 to 100
+- `attack_range_frac` added, set to 0.75
+
+**Paladin**
+- `attack_range_frac` added, set to 0.9
+
+**Starcannon**
+- `factory`/`hide_stored_units` changed from true to false
+- `factory`/`spawn_points` increased from 9 (8 shared) to 14 distinct bones
+- Ammo `ground_target_area_spread` increased from 30 to 50
+- `strategic_icon_priority` added, set to 4
+
+**Starship Projector**
+- `factory`/`spawn_points` changed from `bone_platform` to `socket_shell`
+
+**Centurion**
+- `wreckage_health_frac` added, set to 0.0
 
 ---
 
-## 🚀 Orbital
-*   **Viper:** Damage 40 -> **50**. Range 200 -> **100**. Engages at 75% of max range.
-*   **Paladin:** Engages at 90% of max range.
-*   **Starcannon:** Stored units are now **visible** on the platform, with 14 real spawn bones instead of one shared bone. Drop scatter 30 -> **50**. Strategic icon priority set to 4.
-*   **Starship Projector:** Units now spawn from the shell socket instead of the platform bone.
-*   **Centurion:** Leaves no wreckage. (Sunrise also ships an alternate `l_deffense_satelite` folder with a long-range manual-fire ground weapon, but nothing references it — the live Centurion still uses Legion's specs.)
+## Unit list
 
----
-
-## 🌊 Sea
-*   **Talos (AA Frigate, Rework):** Beam replaced with **laser-blast rounds** — damage 20 -> **10** but with 10 splash over 1 radius, 280 velocity, 0.7 s lifetime. Range 180 -> **110**, rate of fire 1 -> **2**, yaw 180 -> **360**, pitch 180 -> **90**, spread fire enabled, 3° deviation, no idle aim delay. **Target layers now include `WL_AnySurface`** alongside air.
-
----
-
-## 🧩 Unit List & Registration
-*   **Added:** Predator (`l_attack_vehicle`), Liberator (`l_scout_turret`), Reclaim Turret (`l_turret_reclaim`) — all now in `unit_list.json` and `unit_list_legion.json`.
-*   **Removed from the unit list:** `radar_jammer`, `tank_jammer`, `orbital_mine`, `tank_anti_nuke`.
-*   **Note:** `unit_list.json` also references `/pa/units/land/l_tank_adv_support/l_tank_adv_support.json`, which does not exist in the mod.
-*   **Commander base spec:** now carries `UNITTYPE_Fabber`.
-
----
-
-## 🎨 Visuals & Plumbing
-*   **New or replaced models and animation trees:** Flyer Foundry, Advanced Flyer Foundry, Armour Foundry, Advanced Armour Foundry, Scythe, Dauntless, Fabrication Flyer, Marauder, Lockheed, Salamander and Purifier, Loki, Corsair, Panzer, Scorpion, Shank, Stoke, Radar, Deathmark, Shield Generator, Storage, Mass Extractor, Teleporter, the fabricator line, Firebird and the whole Nova family.
-*   **Effects rewiring:** Legion's per-unit jet and contrail PFX consolidated onto shared `l_base_flyer` effects (`jet.pfx`, `jet_small.pfx`, `thrust_line.pfx`, `wing_tip_line.pfx`); factories moved to `legion_fab_spray.pfx` plus dedicated smoke specs; new `energy_ball` / `target_fire` effects for the Nova and `electrode.pfx` for Havoc's chain lightning.
-*   **Lighting:** Foundry headlights and lamps re-bound to real alarm bones with new amber and white colours instead of hard-coded offsets.
-*   **Bone and socket renaming** across most reworked units (muzzles, thrusters, fabber arms) to match the new meshes; several units also had `attachable` head offsets and `mesh_bounds` retuned to the new models.
+- Added `l_attack_vehicle` (Predator), `l_scout_turret` (Liberator) and `l_turret_reclaim` (Reclaim Turret)
+- Removed `radar_jammer`, `tank_jammer`, `orbital_mine` and `tank_anti_nuke`
+- Commander `l_base` `unit_types` added `UNITTYPE_Fabber`
+- `l_tank_adv_support` is listed but has no spec files in the mod
+- The `l_deffense_satelite` folder is shipped but unreferenced; the live Centurion still uses Legion's tool and ammo specs

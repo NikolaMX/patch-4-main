@@ -128,29 +128,6 @@
 - `command_caps` added `ORDER_FireSecondaryWeapon`
 - Muzzles reduced from 2 to 1
 
-**Loki**
-- All four tools changed to a single new `tripod_tool_weapon`
-- `damage` decreased from 800 to 100
-- `splash_damage` decreased from 300 to 50
-- `splash_radius` decreased from 40 to 3
-- `full_damage_splash_radius` decreased from 5 to 1
-- `max_range` decreased from 150 to 140
-- `rate_of_fire` increased from 0.5 to 10
-- `ammo_capacity` added, set to 10.1
-- `ammo_per_shot` added, set to 0.2
-- `ammo_demand` added, set to 1
-- `ammo_source` added, set to `time`
-- `carpet_fire` and `carpet_wait_for_full_ammo` added, set to true
-- `spread_fire` changed from false to true
-- `pitch_range` decreased from 60 to 45
-- `pitch_rate` increased from 20 to 180
-- `yaw_rate` increased from 40 to 45
-- `idle_aim_delay` increased from 2 to 5
-- `initial_velocity` and `max_velocity` set to 700.0
-- `target_layers` removed `WL_Air` and `WL_Underwater`
-- Side gun `splash_radius` decreased from 25 to 5
-- Side gun `full_damage_splash_radius` decreased from 20 to 5
-
 ---
 
 ## Land

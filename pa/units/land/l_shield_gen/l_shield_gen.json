@@ -25,6 +25,10 @@
     "fired": {
       "audio_cue": "/SE/Weapons/bot/sniper_fire_anti_tac",
       "effect_spec": "/pa/units/land/l_shield_gen/shield_hit.pfx bone_void"
+    },
+    "shield_broken": {
+      "audio_cue": "/SE/Death/barrier",
+      "effect_spec": "/pa/units/land/l_shield_gen/shield_off.pfx bone_void"
     }
   },
   "fx_offsets": [

@@ -134,8 +134,9 @@
 
 **Predator** (new)
 - `build_metal_cost` 100
-- `max_health` 100
-- `navigation`/`move_speed` 15, `acceleration` and `brake` 150, `turn_speed` 180
+- `max_health` 125
+- `navigation`/`move_speed` 30, `acceleration` and `brake` 150, `turn_speed` 180
+- `max_range` 60
 - `recon`/`observer` radius 130
 - `unit_types` includes `UNITTYPE_CannonBuildable`
 
@@ -238,6 +239,7 @@
 - Ammo `lifetime` decreased from 30 to 1
 - Ammo `turn_rate` added, set to 60.0
 - Ammo `armor_damage_map`/`AT_Structure` added, set to 1.0
+- Ammo `ignore_shields` added, set to true
 - `ammo_capacity` added, set to 1
 - `ammo_per_shot` added, set to 1
 - `ammo_demand` added, set to 10
@@ -388,6 +390,9 @@
 - `construction_demand`/`metal` decreased from 65 to 60
 - `construction_demand`/`energy` decreased from 1900 to 1750
 
+**Nuke Launcher** (Supernova Strategic Warhead)
+- Ammo `ignore_shields` added, set to true — matches the MLA nuke, which already ignored shields
+
 ---
 
 ## Fabricators
@@ -465,6 +470,24 @@
 
 **Centurion**
 - `wreckage_health_frac` added, set to 0.0
+
+---
+
+## MLA units
+
+Changes this mod makes to base-game (MLA) specs, for cross-faction parity.
+
+**Catapult, Bluehawk, Stingray, Hornet**
+- Tactical missile ammo `ignore_shields` removed — these missiles are now stopped by shields
+
+**Kraken**
+- Missile ammo `ignore_shields` removed (spec rebased on Legion Expansion's version, which is the one that was live)
+
+**Boom**
+- `unit_types` removed `UNITTYPE_CannonBuildable` — no longer loadable into the Unit Cannon
+
+**Nuclear Missile Launcher**
+- Unchanged: its warhead already ignored shields in Titans
 
 ---
 

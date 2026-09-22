@@ -7,13 +7,13 @@
   },
   "idle_aim_delay": 8,
   "max_firing_velocity": 800,
-  "max_range": 260,
+  "max_range": 240,
   "min_firing_velocity": 60,
   "pitch_range": 80,
   "pitch_rate": 60,
-  "rate_of_fire": 10,
+  "rate_of_fire": 0.5,
   "target_layers": ["WL_LandHorizontal", "WL_Seafloor", "WL_WaterSurface"],
-  "yaw_range": 180,
+  "yaw_range": 120,
   "yaw_rate": 60,
   "target_priorities": [
     "Advanced - Structure",
@@ -24,10 +24,12 @@
   ],
 
 
-  "ammo_capacity": 7,
+  "ammo_capacity": 7.5,
     "ammo_demand": 1,
-    "ammo_per_shot": 7,
+    "ammo_per_shot": 3.5,
     "ammo_source": "time",
     "carpet_fire": true,
-    "carpet_wait_for_full_ammo": true
+    "carpet_wait_for_full_ammo": true,
+    "firing_move_speed_multiplier": 0.0,
+    "firing_disable_pushing": true
 }

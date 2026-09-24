@@ -134,7 +134,7 @@
 
 **Predator** (new)
 - `build_metal_cost` 100
-- `max_health` 125
+- `max_health` 120
 - `navigation`/`move_speed` 30, `acceleration` and `brake` 150, `turn_speed` 180
 - `max_range` 60
 - `recon`/`observer` radius 130

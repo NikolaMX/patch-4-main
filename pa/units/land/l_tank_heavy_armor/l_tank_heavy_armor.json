@@ -38,7 +38,7 @@
   "shield": {
         "radius": 75,
         "max_health": 5000,
-        "recharge_rate": 300,
+        "recharge_rate": 75,
         "energy_demand": 2000,
         "cooldown_time": 10,
         "recharge_requires_efficiency": true

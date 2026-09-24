@@ -256,16 +256,22 @@
 
 **Deathmark**
 - `build_metal_cost` decreased from 1200 to 1000
+- `max_range` decreased from 260 to 240
+- `rate_of_fire` increased from 0.142 to 0.5
 - `maintain_priority_target` added, set to false
+- `yaw_range` decreased from 180 to 120
+- `yaw_rate` increased from 60 to 90
 - Ammo `damage` decreased from 1000 to 500
 - Ammo `initial_velocity` decreased from 200 to 100
 - Ammo `max_velocity` decreased from 500 to 300
 - Ammo `physics`/`gravity_scalar` decreased from 26 to 20
-- `rate_of_fire` increased from 0.142 to 10
-- `ammo_capacity` added, set to 7
-- `ammo_per_shot` added, set to 7
+
+- `ammo_capacity` added, set to 7.5
+- `ammo_per_shot` added, set to 3.5
 - `ammo_demand` added, set to 1
 - `ammo_source` added, set to `time`
+- `firing_move_speed_multiplier` added, set to 0.0
+- `firing_disable_pushing` added, set to true
 - `carpet_fire` and `carpet_wait_for_full_ammo` added, set to true
 - `target_priorities` added: `Advanced - Structure`, `Tank - Structure`, `Mobile - Air`, `Structure - Wall`, `Wall`
 
@@ -286,7 +292,7 @@
 - `max_health` decreased from 7000 to 2000
 - `navigation`/`turn_speed` decreased from 180 to 60
 - Weapon tool removed
-- `shield` added: `max_health` 5000, `radius` 75, `energy_demand` 2000, `recharge_rate` 300, `cooldown_time` 10, `recharge_requires_efficiency` true
+- `shield` added: `max_health` 5000, `radius` 75, `energy_demand` 2000, `recharge_rate` 75, `cooldown_time` 10, `recharge_requires_efficiency` true
 - `energy_efficiency_requirement` added, set to 0.9
 - `unit_types` added `UNITTYPE_Shield`
 
@@ -326,7 +332,7 @@
 
 **Rampart**
 - `max_health` increased from 750 to 1500
-- `shield` added: `max_health` 15000, `radius` 100, `energy_demand` 6000, `recharge_rate` 200, `cooldown_time` 30, `recharge_requires_efficiency` true
+- `shield` added: `max_health` 15000, `radius` 100, `energy_demand` 6000, `recharge_rate` 150, `cooldown_time` 30, `recharge_requires_efficiency` true
 - `ammo_capacity` increased from 36000 to 60000
 - `ammo_demand` increased from 1000 to 1200
 - `mesh_bounds` decreased from 30/30/27 to 15/15/13.5
@@ -460,6 +466,7 @@
 - `attack_range_frac` added, set to 0.9
 
 **Starcannon**
+- `max_rang` increased from 600 to 800
 - `factory`/`hide_stored_units` changed from true to false
 - `factory`/`spawn_points` increased from 9 (8 shared) to 14 distinct bones
 - Ammo `ground_target_area_spread` increased from 30 to 50

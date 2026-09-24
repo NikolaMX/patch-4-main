@@ -135,5 +135,5 @@
     "UNITTYPE_Custom1",
     "UNITTYPE_Shield"
   ],
-  "wreckage_health_frac": 0.4
+  "wreckage_health_frac": 1
 }

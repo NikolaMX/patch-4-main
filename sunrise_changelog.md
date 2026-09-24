@@ -110,7 +110,7 @@
 **Comet**
 - `unit_types` changed `UNITTYPE_FabAdvBuild` to `UNITTYPE_FactoryBuild`
 - `command_caps` removed `ORDER_SpecialMove`
-- `wreckage_health_frac` added, set to 0.5
+- `wreckage_health_frac` added, set to 1
 
 **Infiltrator**
 - `unit_types` added `UNITTYPE_Offense`
@@ -337,7 +337,7 @@
 - `ammo_demand` increased from 1000 to 1200
 - `mesh_bounds` decreased from 30/30/27 to 15/15/13.5
 - `placement_size` decreased from 30/30 to 15/15
-- `wreckage_health_frac` added, set to 0.4
+- `wreckage_health_frac` added, set to 1
 - Long-range interceptor tool removed
 
 **Shredder**

@@ -33,7 +33,7 @@
 - Death `damage_volume`/`delay` decreased from 1 to 0.01
 - Death weapon `ammo_capacity` and `ammo_per_shot` decreased from 20 to 15
 
-**Meteor**
+**Overlord** (formerly Meteor)
 - `max_health` decreased from 2000 to 750
 - `navigation`/`aggressive_behavior` added, set to `circle`
 - `navigation`/`aggressive_distance` added, set to 230
@@ -41,7 +41,7 @@
 - `navigation`/`circle_max_time` added, set to 20.0
 - `navigation`/`bank_factor` added, set to 2
 
-**Meteoroid** (Meteor drone)
+**Sparrow** (Overlord drone, formerly Meteoroid)
 - `navigation`/`move_speed` decreased from 80 to 40
 - `navigation`/`turn_speed` decreased from 240 to 120
 - `target_layers` removed `WL_Air`
@@ -64,7 +64,7 @@
 - Ammo `full_damage_splash_radius` decreased from 2 to 1
 - `ammo_capacity` decreased from 425 to 424
 
-**Firebird**
+**Perigrine** (formerly Firebird)
 - Rocket `max_range` decreased from 180 to 160
 - Rocket `rate_of_fire` decreased from 0.33 to 0.25
 - `projectiles_per_fire` added, set to 1 per gun

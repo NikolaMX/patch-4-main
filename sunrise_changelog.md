@@ -436,6 +436,10 @@
 
 ## Sea
 
+**Catfish**
+- `navigation` `type` changed from `water-hover` to `hover`
+- strategic icon updated
+
 **Talos**
 - AA ammo `base_spec` changed from `base_beam` to `base_laser_blast`
 - AA ammo `damage` decreased from 20 to 10
@@ -484,24 +488,15 @@
 
 Changes this mod makes to base-game (MLA) specs, for cross-faction parity.
 
-**Catapult, Bluehawk, Stingray, Hornet**
-- Tactical missile ammo `ignore_shields` removed — these missiles are now stopped by shields
 
-**Kraken**
-- Missile ammo `ignore_shields` removed (spec rebased on Legion Expansion's version, which is the one that was live)
+N/A
 
-**Boom**
-- `unit_types` removed `UNITTYPE_CannonBuildable` — no longer loadable into the Unit Cannon
-
-**Nuclear Missile Launcher**
-- Unchanged: its warhead already ignored shields in Titans
 
 ---
 
 ## Unit list
 
 - Added `l_attack_vehicle` (Predator), `l_scout_turret` (Liberator) and `l_turret_reclaim` (Reclaim Turret)
-- Removed `radar_jammer`, `tank_jammer`, `orbital_mine` and `tank_anti_nuke`
 - Commander `l_base` `unit_types` added `UNITTYPE_Fabber`
 - `l_tank_adv_support` is listed but has no spec files in the mod
 - The `l_deffense_satelite` folder is shipped but unreferenced; the live Centurion still uses Legion's tool and ammo specs

@@ -4,7 +4,7 @@
   "model": { 
 	"filename": "/pa/units/land/l_artillery_short/shell/l_artillery_shell.papa"
   },
-  "damage": 20,
+  "damage": 80,
   "events": {
     "died": {
       "audio_cue": "/SE/Impacts/missile_artillery_short",
@@ -21,7 +21,7 @@
   "physics": {
     "add_to_spatial_db": true
   },
-  "splash_damage": 20,
+  "splash_damage": 80,
   "splash_damages_allies": false,
-  "splash_radius": 12
+  "splash_radius": 10
 }
